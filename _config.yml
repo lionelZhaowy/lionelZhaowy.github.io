@@ -8,6 +8,7 @@
 # Site Settings
 title                    : "赵文尧"
 description              : "AI芯片、算法与硬件协同设计"
+description_en           : "AI chips, algorithm-hardware co-design"
 repository               : "lionelZhaowy/lionelZhaowy.github.io"
 google_scholar_stats_use_cdn : false
 
@@ -24,6 +25,7 @@ author:
   name             : "赵文尧"
   avatar           : "images/Zhaowy_profile.jpg"
   bio              : "中国科学院大学，中国科学院半导体研究所"
+  bio_en           : "University of Chinese Academy of Sciences (UCAS), Institute of Semiconductors, CAS"
   location         : "北京"
   employer         : #"Hefei General Machinery Research Institute"
   pubmed           : 

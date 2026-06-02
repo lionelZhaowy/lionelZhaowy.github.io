@@ -1,0 +1,19 @@
+# English navigation
+main:
+  - title: "About"
+    url: "/en/#about-me"
+
+  - title: "Education"
+    url: "/en/#-xl"
+
+  - title: "Publications"
+    url: "/en/#-lwzl"
+
+  - title: "Honors"
+    url: "/en/#-ryjx"
+
+  - title: "Activities"
+    url: "/en/#-xshy"
+
+  - title: "Internships"
+    url: "/en/#-gzsx"

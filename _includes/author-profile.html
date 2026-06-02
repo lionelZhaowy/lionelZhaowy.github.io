@@ -2,6 +2,8 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
+{% assign is_en = page.url contains '/en/' %}
+
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
   <div class="author__avatar">
@@ -10,13 +12,21 @@
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.bio %}
+      {% if is_en and author.bio_en %}
+        <p class="author__bio">{{ author.bio_en }}</p>
+      {% else %}
+        <p class="author__bio">{{ author.bio }}</p>
+      {% endif %}
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">
-      {% if site.description %}
+      {% if is_en and site.description_en %}
+        <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description_en }}</div></li>
+      {% elsif site.description %}
         <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
       {% endif %}
       {% if author.location %}
