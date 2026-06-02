@@ -39,7 +39,7 @@ redirect_from:
 ### 英文
 ---
 
--	Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. [[An energy-efficient dehazing neural network accelerator based on E2 AOD-Net]](https://link.springer.com/article/10.1007/s11554-024-01574-x)[J]. Journal of Real-Time Image Processing, 2024, 21(6): 197. (JCR:Q2; IF:3.0)
+-	Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. [An energy-efficient dehazing neural network accelerator based on E2 AOD-Net](https://link.springer.com/article/10.1007/s11554-024-01574-x)[J]. Journal of Real-Time Image Processing, 2024, 21(6): 197. (JCR:Q2; IF:3.0)
 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Sens. Actuators Phys. 2021</div><img src='images/sna2021.svg' alt="sym" width="100%"></div></div>
@@ -73,7 +73,7 @@ redirect_from:
 ### 中文
 ---
 
-- 宁欣, `赵文尧`, 宗易昕, 张玉贵, 陈灏, 周琦, 马骏骁. [[神经网络压缩联合优化方法的研究综述]](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[J]. 智能系统学报, 2024, 19(1): 3657. (核心期刊; IF:2.839; CCF-C)
+- 宁欣, `赵文尧`, 宗易昕, 张玉贵, 陈灏, 周琦, 马骏骁. [神经网络压缩联合优化方法的研究综述](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[J]. 智能系统学报, 2024, 19(1): 3657. (核心期刊; IF:2.839; CCF-C)
 
 
 <!-- - 刘伯承, `唐健*`, 王荣彪, 叶文超, 康宜华. 基于TMR的轴承滚子微细裂纹漏磁检测方法. *仪表技术与传感器*. 2021(12): 111-114+118.  (通讯作者; 核心期刊)  
@@ -84,7 +84,7 @@ redirect_from:
 ### 专利
 ---
 - 暂无
-- 
+
 <!-- - 康宜华, `唐健`. 一种基于铁磁性板的缺陷检测方法. [[网页]](https://cprs.patentstar.com.cn/Search/Detail?ANE=9IBC8DFA9GCB8DEA6FAA9HHFCICA1BAA9ACB9EGC9GAA6AAA)
 - 康宜华, `唐健`. 基于电磁原理的倒角测量装置.[[网页]](http://www.wanfangdata.com.cn/details/detail.do?_type=patent&id=CN201921137073.X)
 - 伍剑波, 王杰, 方辉, `唐健`. 一种钢管脉冲磁化漏磁探伤装置. [[网页]](https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=SCPD&dbname=SCPD2016&filename=CN105334260A&v=) 
@@ -100,7 +100,7 @@ redirect_from:
 # 🏅 荣誉奖项
 - *2025.06* 获得 中国科学院大学获`三好学生`
 - *2024.06* 获得 合肥工业大学`校长奖`、安徽省`优秀毕业生`
-- *2023.12* 获得 `本专科生国家奖学金`、校级`一等奖学金`、校级`优秀三好学生`
+- *2023.12* 获得 `国家奖学金`、校级`一等奖学金`、校级`优秀三好学生`
 - *2023.08* 获得 全国大学生集成电路创新创业大赛华中赛区`三等奖`
 - *2023.05* 获得 安徽省机器人大赛单片机与嵌入式赛道`一等奖`
 - *2022.12* 获得 合肥工业大学校级`一等奖学金`、校级`三好学生`
