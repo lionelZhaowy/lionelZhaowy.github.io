@@ -25,7 +25,9 @@ redirect_from:
 - 边缘端AI推理芯片
 - 神经网络算法与硬件协同优化
 - 面向自研处理器的AI模型编译器
-  
+- 感算一体智能视觉芯片
+
+
 
 <span class='anchor' id='-xl'></span>
 
@@ -33,6 +35,9 @@ redirect_from:
 - *2024.09 - 至今*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> 中国科学院大学, <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> 中国科学院半导体研究所, 集成电路科学与工程, 北京, 硕博连读
 - *2020.09 - 2024.06*, <a href="https://www.hfut.edu.cn/"><img class="svg" src="/images/HFUT_logo.svg" width="23pt"></a> 合肥工业大学 微电子学院, 集成电路设计与集成系统, 安徽合肥, 本科
  
+
+
+
 <span class='anchor' id='-xmjl'></span>
 
 # 🧩 项目经历
@@ -51,6 +56,9 @@ redirect_from:
 {% else %}
 - 暂无（请在 `_projects/` 下新增项目文件）
 {% endif %}
+
+
+
 
 <span class='anchor' id='-lwzl'></span>
 
@@ -87,7 +95,6 @@ redirect_from:
 
 <!-- - Xin Jin, Hongbao Ma, `Jian Tang`, Yihua Kang, A Self-Adaptive Vibration Reduction Method Based on Deep Deterministic Policy Gradient (DDPG) Reinforcement Learning Algorithm. *Applied Sciences*. 2022,12(9): 9703. (JCR:Q2; IF:2.838)  
 [[网页]](https://dx.doi.org/10.3390/app12199703) [[预览]](https://github.com/tangjyan/tangjyan.github.io/blob/main/pdf/JinX-2022-A%20Self-Adaptive%20Vibration%20Reduction%20Method%20Based%20on%20Deep%20Deterministic%20Policy.pdf) [[下载]](/pdf/JinX-2022-A%20Self-Adaptive%20Vibration%20Reduction%20Method%20Based%20on%20Deep%20Deterministic%20Policy.pdf) -->
-
 
 
 ### 中文
@@ -143,6 +150,10 @@ redirect_from:
 <!-- - *2021.10*, 全国电磁无损检测技术研讨会 暨 中国机械工程学会无损检测分会电磁专业技术大会第十一届第四次全体会议, 陕西西安, 受邀报告
 - *2019.09*, 第十九届国际应用电磁学与力学会议 (ISEM 2019), 江苏南京, 海报
 - *2017.10*, 第六届中国国际管道会议 (CIPC 2017), 河北廊坊 -->
+
+
+
+
 
 <span class='anchor' id='-gzsx'></span>
 
