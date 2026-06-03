@@ -31,15 +31,17 @@
             </li>
           {% endfor %}
 
-          <li class="masthead__menu-item masthead__menu-item--lang">
-            {% if is_en %}
-              <a href="{{ '/' | relative_url }}">中文</a>
-            {% else %}
-              <a href="{{ '/en/' | relative_url }}">English</a>
-            {% endif %}
-          </li>
-
         </ul>
+
+        {%- comment -%}Language switch fixed at the far right{%- endcomment -%}
+        <div class="masthead__lang">
+          {% if is_en %}
+            <a class="masthead__lang-link" href="{{ '/' | relative_url }}">中文</a>
+          {% else %}
+            <a class="masthead__lang-link" href="{{ '/en/' | relative_url }}">English</a>
+          {% endif %}
+        </div>
+
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>

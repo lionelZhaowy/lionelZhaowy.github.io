@@ -122,6 +122,15 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  projects_en:
+    output: true
+    permalink: /en/projects/:name/
+
 # Defaults
 defaults:
   # _pages
@@ -131,6 +140,24 @@ defaults:
     values:
       layout: default
       author_profile: true
+
+  # projects (zh)
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: default
+      author_profile: true
+      lang: zh
+
+  # projects (en)
+  - scope:
+      path: ""
+      type: projects_en
+    values:
+      layout: default
+      author_profile: true
+      lang: en
 
 
 # Sass/SCSS

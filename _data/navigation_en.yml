@@ -6,6 +6,9 @@ main:
   - title: "Education"
     url: "/en/#-xl"
 
+  - title: "Projects"
+    url: "/en/projects/"
+
   - title: "Publications"
     url: "/en/#-lwzl"
 
