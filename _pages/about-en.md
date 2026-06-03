@@ -19,16 +19,14 @@ lang: en
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences(CAS), advised by Prof. Liyuan Liu. I received my B.Eng. degree from the School of Microelectronics, Hefei University of Technology(HFUT). Including co-authored works, I have published 2 papers.
-<a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a>
-
-My research interests include:
-- Edge AI inference processors
+I am currently a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences(CAS), advised by Prof. Liyuan Liu. I received my B.Eng. degree from the School of Microelectronics, Hefei University of Technology(HFUT). My research primarily focuses on the intersection of artificial intelligence and computer architecture, specifically including:
+- Edge AI inference chips
 - Algorithm–hardware co-optimization for DNNs
-- AI model compilers for self-developed processors
-- Monolithic/3D-Stacked Vision Chip with Processing-near-Sensor Architecture
+- Domain-specific AI compilers for custom processors
+- Near-sensor computing smart vision chips
 
-
+I have been deeply involved in the algorithm design, compilation and deployment for 3 in-house custom Application-Specific Integrated Circuits (ASICs), as well as the architecture design of 2 FPGA-based AI accelerators. To date, I have contributed to 2 academic publications (including co-authored works).
+<a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a>
 
 
 

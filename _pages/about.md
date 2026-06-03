@@ -18,14 +18,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-我目前就读于中国科学院半导体研究所，导师为刘力源研究员。本科毕业于合肥工业大学微电子学院。包括合著，我已经发表 2 篇学术论文。
- <a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
-
-我的研究领域包括：
+我目前就读于中国科学院半导体研究所，导师为刘力源研究员。本科毕业于合肥工业大学微电子学院。我的主要研究兴趣聚焦于处理器底层电路与AI算法的跨层级协同优化，具体研究领域包括: 
 - 边缘端AI推理芯片
 - 神经网络算法与硬件协同优化
-- 面向自研处理器的AI模型编译器
-- 感算一体智能视觉芯片
+- 面向定制化处理器的AI模型编译器
+- 感算一体化智能视觉芯片
+
+在科研实践中，我深度参与了课题组 3 款自研ASIC处理器的算法设计和编译部署工作，并完成了 2 款基于FPGA的AI加速器设计与验证。迄今为止，已在相关领域发表(包括合作) 2 篇学术论文。
+<a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
 
 
 
