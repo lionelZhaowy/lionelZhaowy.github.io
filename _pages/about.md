@@ -33,6 +33,25 @@ redirect_from:
 - *2024.09 - 至今*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> 中国科学院大学, <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> 中国科学院半导体研究所, 集成电路科学与工程, 北京, 硕博连读
 - *2020.09 - 2024.06*, <a href="https://www.hfut.edu.cn/"><img class="svg" src="/images/HFUT_logo.svg" width="23pt"></a> 合肥工业大学 微电子学院, 集成电路设计与集成系统, 安徽合肥, 本科
  
+<span class='anchor' id='-xmjl'></span>
+
+# 🧩 项目经历
+
+{% assign items = site.projects | sort: 'order' %}
+{% if items and items.size > 0 %}
+
+{% for p in items %}
+- **[{{ p.title }}]({{ p.url | relative_url }})**{% if p.period %}（{{ p.period }}）{% endif %}
+
+  {% if p.role %}- 角色：{{ p.role }}{% endif %}
+  {% if p.tech %}- 关键词：{{ p.tech | join: ' / ' }}{% endif %}
+  {% if p.summary %}- 简介：{{ p.summary }}{% endif %}
+{% endfor %}
+
+{% else %}
+- 暂无（请在 `_projects/` 下新增项目文件）
+{% endif %}
+
 <span class='anchor' id='-lwzl'></span>
 
 # 📝 论文专利

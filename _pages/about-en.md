@@ -29,6 +29,25 @@ My research interests include:
 - *2024.09 - Present*, University of Chinese Academy of Sciences (UCAS) & Institute of Semiconductors, CAS, Integrated Circuit Science and Engineering, Beijing, China
 - *2020.09 - 2024.06*, Hefei University of Technology, School of Microelectronics, Integrated Circuit Design and Integrated Systems, Hefei, China
 
+<span class='anchor' id='-xmjl'></span>
+
+# 🧩 Projects
+
+{% assign items = site.projects_en | sort: 'order' %}
+{% if items and items.size > 0 %}
+
+{% for p in items %}
+- **[{{ p.title }}]({{ p.url | relative_url }})**{% if p.period %} ({{ p.period }}){% endif %}
+
+  {% if p.role %}- Role: {{ p.role }}{% endif %}
+  {% if p.tech %}- Keywords: {{ p.tech | join: ' / ' }}{% endif %}
+  {% if p.summary %}- Summary: {{ p.summary }}{% endif %}
+{% endfor %}
+
+{% else %}
+- None yet. (Add files under `_projects_en/`.)
+{% endif %}
+
 <span class='anchor' id='-lwzl'></span>
 
 # 📝 Publications & Patents
