@@ -43,6 +43,29 @@
   }
 }
 
+/* Keep language switch on the same row and pinned to the far right */
+.greedy-nav {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav .visible-links {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.masthead__lang {
+  margin-left: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+.masthead__lang-link {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+}
+
 .masthead__menu-home-item {
   @include breakpoint($medium) {
     display: block !important;
