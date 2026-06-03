@@ -31,10 +31,15 @@ links:
 {{ page.solution | markdownify }}
 
 ## My Contributions
-{% if page.highlights %}
+<!-- {% if page.highlights %}
 - {% for h in page.highlights %}
   - {{ h }}
   {% endfor %}
+{% endif %} -->
+{% if page.highlights %}
+{% for h in page.highlights %}
+- {{ h }}
+{% endfor %}
 {% endif %}
 
 ## Results

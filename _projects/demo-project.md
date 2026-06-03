@@ -31,10 +31,15 @@ links:
 {{ page.solution | markdownify }}
 
 ## 个人贡献
-{% if page.highlights %}
+<!-- {% if page.highlights %}
 - {% for h in page.highlights %}
   - {{ h }}
   {% endfor %}
+{% endif %} -->
+{% if page.highlights %}
+{% for h in page.highlights %}
+- {{ h }}
+{% endfor %}
 {% endif %}
 
 ## 结果与指标
