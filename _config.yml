@@ -23,10 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "赵文尧"
+  name_en          : "Wenyao Zhao"
   avatar           : "images/Zhaowy_profile.jpg"
   bio              : "中国科学院大学，中国科学院半导体研究所"
   bio_en           : "University of Chinese Academy of Sciences (UCAS), Institute of Semiconductors, CAS"
   location         : "北京"
+  location_en      : "Beijing, China"
   employer         : #"Hefei General Machinery Research Institute"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=WMkMTb4AAAAJ"
