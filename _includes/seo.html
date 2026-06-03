@@ -8,9 +8,33 @@
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-<title>{{ site.title }}的主页</title>
+{%- comment -%}
+  Language detection: prefer explicit front matter `page.lang`.
+{%- endcomment -%}
+{% assign is_en = false %}
+{% if page.lang %}
+  {% if page.lang == 'en' %}{% assign is_en = true %}{% endif %}
+{% else %}
+  {% assign is_en = page.url contains '/en/' %}
+{% endif %}
 
-{% assign seo_description = page.description | default: page.excerpt | default: site.description %}
+{%- comment -%}
+  Title
+{%- endcomment -%}
+{% if is_en %}
+  <title>{{ site.title_en | default: page.title | default: site.title }}</title>
+{% else %}
+  <title>{{ site.title }}的主页</title>
+{% endif %}
+
+{%- comment -%}
+  Description: allow per-page override; otherwise use site.description(_en)
+{%- endcomment -%}
+{% if is_en %}
+  {% assign seo_description = page.description | default: page.excerpt | default: site.description_en | default: site.description %}
+{% else %}
+  {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
+{% endif %}
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
@@ -29,16 +53,16 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="{% if is_en %}en{% else %}zh_CN{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ site.title }}">
+<meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
 {% if seo_url %}
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
