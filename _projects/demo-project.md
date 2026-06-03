@@ -8,6 +8,7 @@ tech:
   - "Quantization"
   - "FPGA/ASIC"
 summary: "面向边缘端场景的低功耗神经网络推理加速方案，实现端侧实时推理。"
+teaser: "images/android-chrome-512x512.png"
 
 # 你新增的字段：项目技术方案（详细）
 # 建议字段名：solution（也可用 technical_solution / architecture / approach）

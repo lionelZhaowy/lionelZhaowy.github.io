@@ -46,16 +46,121 @@ My research interests include:
 
 # 🧩 Projects
 
+<style>
+  /* 卡片整体样式 */
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+  }
+  /* 鼠标悬停时的轻微抬起动画 */
+  .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  }
+  /* 缩略图区域 */
+  .project-thumbnail {
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 20px;
+  }
+  .project-thumbnail img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    aspect-ratio: 16/9; /* 强制 16:9 比例 */
+    border: 1px solid #eaeaea;
+  }
+  /* 文字信息区域 */
+  .project-info {
+    flex-grow: 1;
+  }
+  .project-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.25em;
+  }
+  .project-info h3 a {
+    text-decoration: none;
+    color: #2c3e50;
+  }
+  .project-meta {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  .project-summary {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  /* 底部标签区域 */
+  .project-tags span {
+    display: inline-block;
+    background: #f1f3f5;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #495057;
+    margin-right: 8px;
+    margin-bottom: 6px;
+  }
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+    }
+    .project-thumbnail {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+</style>
+
 {% assign items = site.projects_en | sort: 'order' %}
 {% if items and items.size > 0 %}
 
-{% for p in items %}
-- **[{{ p.title }}]({{ p.url | relative_url }})**{% if p.period %} ({{ p.period }}){% endif %}
-
-  {% if p.role %}- Role: {{ p.role }}{% endif %}
-  {% if p.tech %}- Keywords: {{ p.tech | join: ' / ' }}{% endif %}
-  {% if p.summary %}- Summary: {{ p.summary }}{% endif %}
-{% endfor %}
+<div class="project-cards">
+  {% for p in items %}
+  <div class="project-card">
+    <div class="project-thumbnail">
+      {% if p.teaser %}
+        <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+      {% else %}
+        <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
+      {% endif %}
+    </div>
+    
+    <div class="project-info">
+      <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+      
+      {% if p.period %}
+        <div class="project-meta">
+          <i class="fas fa-calendar-alt"></i> {{ p.period }}
+        </div>
+      {% endif %}
+      
+      {% if p.summary %}
+        <div class="project-summary">{{ p.summary }}</div>
+      {% endif %}
+      
+      <div class="project-tags">
+        {% if p.role %}<span><i class="fas fa-user-tag"></i> {{ p.role }}</span>{% endif %}
+        {% if p.tech %}<span><i class="fas fa-microchip"></i> {{ p.tech | join: ' / ' }}</span>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 
 {% else %}
 - None yet. (Add files under `_projects_en/`.)
