@@ -3,6 +3,7 @@ permalink: /en/
 title: ""
 excerpt: ""
 author_profile: true
+lang: en
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -14,13 +15,13 @@ author_profile: true
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences (UCAS). I obtained my B.Eng. degree from Hefei University of Technology. Including co-authored works, I have published 2 papers.
+I am currently a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. degree from the School of Microelectronics, Hefei University of Technology. Including co-authored works, I have published 2 papers.
 <a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a>
 
 My research interests include:
-- Edge AI inference accelerators
-- Algorithm-hardware co-optimization for neural networks
-- AI compiler toolchains for self-developed processors
+- Edge AI inference chips
+- Algorithm–hardware co-optimization for neural networks
+- AI model compilers for self-developed processors
 
 <span class='anchor' id='-xl'></span>
 

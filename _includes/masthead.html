@@ -2,22 +2,22 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
         <ul class="visible-links">
-          {% assign is_en = page.url contains '/en/' %}
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-item--lang">
-            {% if is_en %}
-              <a href="{{ '/' | relative_url }}" target="_self">
-                <img class="svg" src="{{ '/images/cn.svg' | relative_url }}" width="20pt">
-                中文
-              </a>
-            {% else %}
-              <a href="{{ '/en/' | relative_url }}" target="_self">
-                <img class="svg" src="{{ '/images/en.svg' | relative_url }}" width="20pt">
-                English
-              </a>
-            {% endif %}
-          </li>
+
+          {%- comment -%}
+          更可靠的语言判定：优先使用页面 front matter 中的 page.lang。
+          兼容旧逻辑：若未设置 lang，则回退到根据 URL 是否包含 /en/ 来判断。
+          {%- endcomment -%}
+          {% assign is_en = false %}
+          {% if page.lang %}
+            {% if page.lang == 'en' %}{% assign is_en = true %}{% endif %}
+          {% else %}
+            {% assign is_en = page.url contains '/en/' %}
+          {% endif %}
 
           {% if is_en %}
             {% assign nav = site.data.navigation_en.main %}
@@ -26,9 +26,24 @@
           {% endif %}
 
           {% for link in nav %}
-            <li class="masthead__menu-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            </li>
           {% endfor %}
+
+          <li class="masthead__menu-item masthead__menu-item--lang">
+            {% if is_en %}
+              <a href="{{ '/' | relative_url }}">中文</a>
+            {% else %}
+              <a href="{{ '/en/' | relative_url }}">English</a>
+            {% endif %}
+          </li>
+
         </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
