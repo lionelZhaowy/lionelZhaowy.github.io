@@ -66,13 +66,14 @@ redirect_from:
     width: 200px;
     margin-right: 20px;
   }
-  .project-thumbnail img {
-    width: 100%;
-    border-radius: 6px;
-    object-fit: cover;
-    aspect-ratio: 16/9; /* 强制 16:9 比例 */
-    border: 1px solid #eaeaea;
-  }
+ .project-thumbnail img,
+ .project-thumbnail video {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 16/9; /* 强制 16:9 比例 */
+  border: 1px solid #eaeaea;
+ }
   /* 文字信息区域 */
   .project-info {
     flex-grow: 1;
@@ -129,25 +130,27 @@ redirect_from:
   <div class="project-card">
     <div class="project-thumbnail">
       {% if p.teaser %}
-        <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+        {% if p.teaser contains '.mp4' or p.teaser contains '.webm' %}
+          <video autoplay loop muted playsinline>
+            <source src="{{ p.teaser | relative_url }}" type="video/mp4">
+          </video>
+        {% else %}
+          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+        {% endif %}
       {% else %}
         <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
       {% endif %}
     </div>
-    
     <div class="project-info">
       <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-      
       {% if p.period %}
         <div class="project-meta">
           <i class="fas fa-calendar-alt"></i> {{ p.period }}
         </div>
       {% endif %}
-      
       {% if p.summary %}
         <div class="project-summary">{{ p.summary }}</div>
       {% endif %}
-      
       <div class="project-tags">
         {% if p.role %}<span><i class="fas fa-user-tag"></i> {{ p.role }}</span>{% endif %}
         {% if p.tech %}<span><i class="fas fa-microchip"></i> {{ p.tech | join: ' / ' }}</span>{% endif %}
@@ -156,7 +159,6 @@ redirect_from:
   </div>
   {% endfor %}
 </div>
-
 {% else %}
 - 暂无（请在 `_projects/` 下新增项目文件）
 {% endif %}
