@@ -171,9 +171,10 @@ I have been deeply involved in the algorithm design, compilation and deployment 
 
 ### Journal / Conference
 ---
-- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. [An energy-efficient dehazing neural network accelerator based on E2 AOD-Net](https://link.springer.com/article/10.1007/s11554-024-01574-x). *Journal of Real-Time Image Processing*, 2024, 21(6): 197. (JCR: Q2; IF: 3.0)
+- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. An energy-efficient dehazing neural network accelerator based on E2 AOD-Net. *Journal of Real-Time Image Processing*, 2024, 21(6): 197. (JCR: Q2; IF: 3.0) [[web]](https://link.springer.com/article/10.1007/s11554-024-01574-x)[[pdf]](/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf)
 
-- NING Xin, ZHAO Wenyao, ZONG Yixin, et al. [An overview of the joint optimization method for neural network compression](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[J]. CAAI Transactions on Intelligent Systems, 2024, 19(1): 36-57. (PKU Core; IF:2.839; CCF-C)
+
+- NING Xin, ZHAO Wenyao, ZONG Yixin, et al. An overview of the joint optimization method for neural network compression[J]. CAAI Transactions on Intelligent Systems, 2024, 19(1): 36-57. (PKU Core; IF:2.839; CCF-C) [[web]](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[[pdf]](images\project\202305-202309-MicroHFUT\s11554-024-01574-x.pdf)
 
 
 ### Patents

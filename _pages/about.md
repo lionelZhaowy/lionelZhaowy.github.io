@@ -171,7 +171,7 @@ redirect_from:
 ### 英文
 ---
 
-- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. [An energy-efficient dehazing neural network accelerator based on E2 AOD-Net](https://link.springer.com/article/10.1007/s11554-024-01574-x)[J]. Journal of Real-Time Image Processing, 2024, 21(6): 197. (JCR:Q2; IF:3.0)
+- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. An energy-efficient dehazing neural network accelerator based on E2 AOD-Net[J]. Journal of Real-Time Image Processing, 2024, 21(6): 197. (JCR:Q2; IF:3.0) [[网页]](https://link.springer.com/article/10.1007/s11554-024-01574-x)[[pdf]](/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf)
 
 
 
@@ -179,7 +179,7 @@ redirect_from:
 ### 中文
 ---
 
-- 宁欣, `赵文尧`, 宗易昕, 张玉贵, 陈灏, 周琦, 马骏骁. [神经网络压缩联合优化方法的研究综述](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[J]. 智能系统学报, 2024, 19(1): 3657. (核心期刊; IF:2.839; CCF-C)
+- 宁欣, `赵文尧`, 宗易昕, 张玉贵, 陈灏, 周琦, 马骏骁. 神经网络压缩联合优化方法的研究综述[J]. 智能系统学报, 2024, 19(1): 3657. (核心期刊; IF:2.839; CCF-C) [[网页]](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[[pdf]](images\project\202305-202309-MicroHFUT\s11554-024-01574-x.pdf)
 
 
 
