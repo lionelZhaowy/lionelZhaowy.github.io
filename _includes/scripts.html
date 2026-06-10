@@ -5,12 +5,10 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // 专门获取刚才我们在 about.md 中打上标记的缩略图视频
-    const videos = document.querySelectorAll('.project-video-thumb');
+    // 【升级点】直接获取页面上所有的 video 标签，无论是首页缩略图还是详情页正文视频，统统接管！
+    const videos = document.querySelectorAll('video');
 
-    // 如果浏览器不支持 IntersectionObserver（极少数老旧浏览器），则直接返回
     if (!('IntersectionObserver' in window)) {
-        console.warn("当前浏览器不支持 IntersectionObserver");
         return;
     }
 
@@ -19,16 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const video = entry.target;
             
             if (entry.isIntersecting) {
-                // 视频进入视口，尝试播放
+                // 进入视口，尝试播放
                 let playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(error => {
-                        // 忽略移动端省电模式或无交互情况下的自动播放拦截报错
-                        // console.log("自动播放被拦截", error);
+                        // 忽略静音视频自动播放的 Promise 报错
                     });
                 }
             } else {
-                // 视频离开视口，立即暂停，释放手机宝贵的硬件解码器资源
+                // 离开视口，立即暂停，释放硬件解码器！
                 video.pause();
             }
         });
@@ -37,8 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.1 
     });
 
-    // 让观察者开始监视页面上的每一个项目缩略图视频
     videos.forEach(video => {
+        // 【升级点】给每个视频强制加上 playsinline 属性，防止某些流氓浏览器拦截
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
         observer.observe(video);
     });
 });
