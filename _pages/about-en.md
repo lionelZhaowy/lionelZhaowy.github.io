@@ -4,6 +4,9 @@ title: ""
 excerpt: ""
 author_profile: true
 lang: en
+redirect_from: 
+  - /en/about/
+  - /en/about.html
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -12,10 +15,6 @@ lang: en
 {% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
-
-
-
 
 <span class='anchor' id='about-me'></span>
 
@@ -35,8 +34,6 @@ I have been deeply involved in the algorithm design, compilation and deployment 
 # 🎓 Education
 - *2024.09 - Present*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> University of Chinese Academy of Sciences (UCAS) & <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> Institute of Semiconductors, CAS, Integrated Circuit Science and Engineering, Beijing, China
 - *2020.09 - 2024.06*, <a href="https://www.hfut.edu.cn/"><img class="svg" src="/images/HFUT_logo.svg" width="23pt"></a> Hefei University of Technology, School of Microelectronics, Integrated Circuit Design and Integrated Systems, Hefei, China
-
-
 
 
 
@@ -69,13 +66,14 @@ I have been deeply involved in the algorithm design, compilation and deployment 
     width: 200px;
     margin-right: 20px;
   }
-  .project-thumbnail img {
-    width: 100%;
-    border-radius: 6px;
-    object-fit: cover;
-    aspect-ratio: 16/9; /* 强制 16:9 比例 */
-    border: 1px solid #eaeaea;
-  }
+ .project-thumbnail img,
+ .project-thumbnail video {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 16/9; /* 强制 16:9 比例 */
+  border: 1px solid #eaeaea;
+ }
   /* 文字信息区域 */
   .project-info {
     flex-grow: 1;
@@ -132,25 +130,27 @@ I have been deeply involved in the algorithm design, compilation and deployment 
   <div class="project-card">
     <div class="project-thumbnail">
       {% if p.teaser %}
-        <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+        {% if p.teaser contains '.mp4' or p.teaser contains '.webm' %}
+          <video class="project-video-thumb" autoplay loop muted playsinline webkit-playsinline>
+            <source src="{{ p.teaser | relative_url }}?v=1" type="video/mp4">
+          </video>
+        {% else %}
+          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+        {% endif %}
       {% else %}
         <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
       {% endif %}
     </div>
-    
     <div class="project-info">
       <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-      
       {% if p.period %}
         <div class="project-meta">
           <i class="fas fa-calendar-alt"></i> {{ p.period }}
         </div>
       {% endif %}
-      
       {% if p.summary %}
         <div class="project-summary">{{ p.summary }}</div>
       {% endif %}
-      
       <div class="project-tags">
         {% if p.role %}<span><i class="fas fa-user-tag"></i> {{ p.role }}</span>{% endif %}
         {% if p.tech %}<span><i class="fas fa-microchip"></i> {{ p.tech | join: ' / ' }}</span>{% endif %}
@@ -159,6 +159,10 @@ I have been deeply involved in the algorithm design, compilation and deployment 
   </div>
   {% endfor %}
 </div>
+{% else %}
+- 暂无（请在 `_projects/` 下新增项目文件）
+{% endif %}
+
 
 {% else %}
 - None yet. (Add files under `_projects_en/`.)
