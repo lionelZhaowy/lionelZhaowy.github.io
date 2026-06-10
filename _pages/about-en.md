@@ -160,11 +160,6 @@ I have been deeply involved in the algorithm design, compilation and deployment 
   {% endfor %}
 </div>
 {% else %}
-- 暂无（请在 `_projects/` 下新增项目文件）
-{% endif %}
-
-
-{% else %}
 - None yet. (Add files under `_projects_en/`.)
 {% endif %}
 
