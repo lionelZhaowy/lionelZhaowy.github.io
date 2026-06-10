@@ -131,8 +131,8 @@ redirect_from:
     <div class="project-thumbnail">
       {% if p.teaser %}
         {% if p.teaser contains '.mp4' or p.teaser contains '.webm' %}
-          <video autoplay loop muted playsinline>
-            <source src="{{ p.teaser | relative_url }}" type="video/mp4">
+          <video class="project-video-thumb" autoplay loop muted playsinline webkit-playsinline>
+            <source src="{{ p.teaser | relative_url }}?v=1" type="video/mp4">
           </video>
         {% else %}
           <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">

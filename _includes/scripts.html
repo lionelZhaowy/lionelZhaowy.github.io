@@ -2,3 +2,44 @@
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 专门获取刚才我们在 about.md 中打上标记的缩略图视频
+    const videos = document.querySelectorAll('.project-video-thumb');
+
+    // 如果浏览器不支持 IntersectionObserver（极少数老旧浏览器），则直接返回
+    if (!('IntersectionObserver' in window)) {
+        console.warn("当前浏览器不支持 IntersectionObserver");
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            
+            if (entry.isIntersecting) {
+                // 视频进入视口，尝试播放
+                let playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // 忽略移动端省电模式或无交互情况下的自动播放拦截报错
+                        // console.log("自动播放被拦截", error);
+                    });
+                }
+            } else {
+                // 视频离开视口，立即暂停，释放手机宝贵的硬件解码器资源
+                video.pause();
+            }
+        });
+    }, {
+        // 阈值：视频有 10% 进入屏幕就开始触发播放
+        threshold: 0.1 
+    });
+
+    // 让观察者开始监视页面上的每一个项目缩略图视频
+    videos.forEach(video => {
+        observer.observe(video);
+    });
+});
+</script>
