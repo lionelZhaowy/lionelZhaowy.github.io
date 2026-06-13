@@ -29,7 +29,7 @@ redirect_from:
 
 
 
-<span class='anchor' id='-xl'></span>
+<span class='anchor' id='education'></span>
 
 # 🎓 学历
 - *2024.09 - 至今*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> 中国科学院大学, <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> 中国科学院半导体研究所, 集成电路科学与工程, 北京, 硕博连读
@@ -37,90 +37,10 @@ redirect_from:
  
 
 
-<span class='anchor' id='-xmjl'></span>
+<span class='anchor' id='projects'></span>
 
 # 🧩 项目经历
 
-<style>
-  /* 卡片整体样式 */
-  .project-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 25px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #f0f0f0;
-  }
-  /* 鼠标悬停时的轻微抬起动画 */
-  .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-  }
-  /* 缩略图区域 */
-  .project-thumbnail {
-    flex-shrink: 0;
-    width: 200px;
-    margin-right: 20px;
-  }
- .project-thumbnail img,
- .project-thumbnail video {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  aspect-ratio: 16/9; /* 强制 16:9 比例 */
-  border: 1px solid #eaeaea;
- }
-  /* 文字信息区域 */
-  .project-info {
-    flex-grow: 1;
-  }
-  .project-info h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 1.25em;
-  }
-  .project-info h3 a {
-    text-decoration: none;
-    color: #2c3e50;
-  }
-  .project-meta {
-    font-size: 0.85em;
-    color: #7f8c8d;
-    margin-bottom: 10px;
-  }
-  .project-summary {
-    font-size: 0.95em;
-    color: #444;
-    margin-bottom: 12px;
-    line-height: 1.6;
-  }
-  /* 底部标签区域 */
-  .project-tags span {
-    display: inline-block;
-    background: #f1f3f5;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    color: #495057;
-    margin-right: 8px;
-    margin-bottom: 6px;
-  }
-  /* 移动端适配 */
-  @media (max-width: 768px) {
-    .project-card {
-      flex-direction: column;
-    }
-    .project-thumbnail {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
-  }
-</style>
 
 {% assign items = site.projects | sort: 'order' %}
 {% if items and items.size > 0 %}
@@ -135,7 +55,7 @@ redirect_from:
             <source src="{{ p.teaser | relative_url }}?v=1" type="video/mp4">
           </video>
         {% else %}
-          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}">
+          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}" loading="lazy">
         {% endif %}
       {% else %}
         <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
@@ -164,7 +84,7 @@ redirect_from:
 {% endif %}
 
 
-<span class='anchor' id='-lwzl'></span>
+<span class='anchor' id='publications'></span>
 
 # 📝 论文专利
 
@@ -194,7 +114,7 @@ redirect_from:
 
 
 
-<span class='anchor' id='-ryjx'></span>
+<span class='anchor' id='honors'></span>
 
 # 🏅 荣誉奖项
 - *2025.06* 获得 中国科学院大学获`三好学生`
@@ -211,10 +131,7 @@ redirect_from:
 
 
 
-<span class='anchor' id='-xshy'></span>
-
-# 🏛️ 学术会议
-- 暂无
+{% if false %}{% endif %}
 
 
 
@@ -222,7 +139,5 @@ redirect_from:
 
 
 
-<span class='anchor' id='-gzsx'></span>
 
-# 💻 工作实习
-- 暂无
+{% if false %}{% endif %}

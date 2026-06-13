@@ -4,19 +4,19 @@ main:
     url: "/#about-me"
 
   - title: "学历"
-    url: "/#-xl"
+    url: "/#education"
 
   - title: "项目经历"
-    url: "/#-xmjl"
+    url: "/#projects"
 
   - title: "论文专利"
-    url: "/#-lwzl"
+    url: "/#publications"
 
   - title: "荣誉奖项"
-    url: "/#-ryjx"
+    url: "/#honors"
 
   - title: "学术会议"
-    url: "/#-xshy"
+    url: "/#activities"
 
   - title: "工作实习"
-    url: "/#-gzsx"
+    url: "/#internships"

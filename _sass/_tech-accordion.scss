@@ -1,0 +1,50 @@
+/* ==========================================================================
+   TECH ACCORDION (extracted from project detail pages)
+   ========================================================================== */
+
+.tech-accordion {
+  margin-bottom: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,62,140,0.03);
+  overflow: hidden;
+}
+.tech-accordion > summary {
+  padding: 15px 20px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2c3e50;
+  background-color: #fafbfc;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease;
+}
+.tech-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+.tech-accordion > summary:hover {
+  background-color: #f1f3f5;
+}
+.tech-accordion > summary::after {
+  content: '+';
+  font-size: 1.2em;
+  color: #7f8c8d;
+  transition: transform 0.3s ease;
+}
+.tech-accordion[open] > summary::after {
+  content: '\2212';
+  transform: rotate(180deg);
+}
+.tech-accordion[open] > summary {
+  border-bottom: 1px solid #f0f0f0;
+}
+.tech-accordion-content {
+  padding: 20px;
+  background-color: #fff;
+  color: #444;
+  line-height: 1.6;
+}

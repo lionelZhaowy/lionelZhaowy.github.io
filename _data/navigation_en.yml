@@ -4,19 +4,19 @@ main:
     url: "/en/#about-me"
 
   - title: "Education"
-    url: "/en/#-xl"
+    url: "/en/#education"
 
   - title: "Projects"
-    url: "/en/#-xmjl"
+    url: "/en/#projects"
 
   - title: "Publications"
-    url: "/en/#-lwzl"
+    url: "/en/#publications"
 
   - title: "Honors"
-    url: "/en/#-ryjx"
+    url: "/en/#honors"
 
   - title: "Activities"
-    url: "/en/#-xshy"
+    url: "/en/#activities"
 
   - title: "Internships"
-    url: "/en/#-gzsx"
+    url: "/en/#internships"

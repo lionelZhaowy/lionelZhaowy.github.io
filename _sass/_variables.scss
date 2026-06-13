@@ -13,12 +13,12 @@
    $indent-var                 : 0.5em;
    
    /* system typefaces */
-   $serif                      :  "Trebuchet MS",sans-serif; // Georgia, Times, sans-serif;
-   $sans-serif                 : "Trebuchet MS", Helvetica,"Source Han Sans", "Microsoft YaHei", sans-serif;
+   $serif                      : "Inter", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif; // Georgia, Times, sans-serif;
+   $sans-serif                 : "Inter", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
    // $sans-serif                 : Georgia, serif, sans-serif;
    
    // $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-   $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+   $monospace                  : "JetBrains Mono", "Fira Code", Monaco, Consolas, "Lucida Console", monospace;
    
    /* sans serif typefaces */
    $sans-serif-narrow          : $sans-serif;
@@ -64,11 +64,13 @@
    $text-color                 : $dark-gray;
    $border-color               : $lighter-gray;
    
-   $primary-color              : #7a8288;
+   $primary-color              : #003E8C;
    $success-color              : #62c462;
    $warning-color              : #f89406;
    $danger-color               : #ee5f5b;
-   $info-color                 : #224b8d;
+   $info-color                 : #003E8C;
+   $accent-color-orange        : #d97706;
+   $accent-color-green         : #059669;
    // $info-color                 : #52adc8;
    
    /* brands */
@@ -153,6 +155,7 @@
    
    $border-radius              : 4px;
    $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+   $card-shadow                : 0 2px 8px rgba(0, 62, 140, 0.06);
    $navicon-width              : 28px;
    $navicon-height             : 4px;
    $global-transition          : all 0.2s ease-in-out;
