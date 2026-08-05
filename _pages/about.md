@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <section class="home-hero" id="about-me">
-  <p class="section-eyebrow">ABOUT ME · 边缘智能与定制计算</p>
+  <p class="section-eyebrow">ABOUT ME · 边缘智能计算</p>
   <h1>你好，我是 <span>赵文尧</span>。</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，攻读集成电路科学与工程硕博连读项目，导师为刘力源研究员；本科毕业于合肥工业大学微电子学院。</p>

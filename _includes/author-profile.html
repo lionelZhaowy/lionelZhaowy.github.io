@@ -39,8 +39,8 @@
   </div>
 
   {% if author_focus %}
-    <div class="author__focus" aria-label="{% if is_en %}Focus areas{% else %}关注方向{% endif %}">
-      <p class="author__label">{% if is_en %}Focus Areas{% else %}关注方向{% endif %}</p>
+    <div class="author__focus" aria-label="{% if is_en %}Focus areas{% else %}研究方向{% endif %}">
+      <p class="author__label">{% if is_en %}Focus Areas{% else %}研究方向{% endif %}</p>
       <ul>
         {% for item in author_focus %}<li>{{ item }}</li>{% endfor %}
       </ul>

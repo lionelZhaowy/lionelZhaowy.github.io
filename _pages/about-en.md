@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <section class="home-hero" id="about-me">
-  <p class="section-eyebrow">ABOUT ME · EDGE AI AND CUSTOM COMPUTING</p>
+  <p class="section-eyebrow">ABOUT ME · EDGE AI COMPUTING</p>
   <h1>Hello, I’m <span>Wenyao Zhao</span>.</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">I am a graduate student in the integrated M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
