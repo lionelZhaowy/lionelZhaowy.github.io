@@ -26,7 +26,7 @@ redirect_from:
 
 <section class="home-section" id="education">
   <header class="section-heading">
-    <div><p>EDUCATION</p><h2>教育经历</h2></div>
+    <div><p>EDUCATION</p><h2>教育背景</h2></div>
   </header>
   <div class="education-list">
     <article>
