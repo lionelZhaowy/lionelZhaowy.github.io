@@ -75,7 +75,9 @@
       }
 
       video.addEventListener("loadedmetadata", function () {
-        if (video.videoWidth && video.videoHeight && !video.classList.contains("project-card__media")) {
+        if (video.videoWidth && video.videoHeight &&
+            !video.classList.contains("project-card__media") &&
+            !video.closest(".custom-video-grid")) {
           frame.style.aspectRatio = video.videoWidth + " / " + video.videoHeight;
         }
       });

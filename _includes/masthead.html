@@ -20,7 +20,8 @@
 <header class="masthead">
   <div class="masthead__inner-wrap">
     <a class="site-brand" href="{% if is_en %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
-      <span class="site-brand__mark" aria-hidden="true">WZ</span>
+      <img class="site-brand__mark" src="{{ '/images/apple-touch-icon.png' | relative_url }}"
+           width="36" height="36" alt="" aria-hidden="true" decoding="async">
       <span>
         <strong>{% if is_en %}Wenyao Zhao{% else %}赵文尧{% endif %}</strong>
         <small>{% if is_en %}Academic Homepage{% else %}Academic Homepage{% endif %}</small>
