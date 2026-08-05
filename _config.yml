@@ -8,8 +8,8 @@
 # Site Settings
 title                    : "赵文尧"
 title_en                 : "Wenyao Zhao | Homepage"
-description              : "AI芯片、算法与硬件协同设计"
-description_en           : "AI chips, algorithm-hardware co-design"
+description              : "AI 处理器、编译工具链与软硬件协同设计"
+description_en           : "AI processors, compiler toolchains, and hardware–software co-design"
 repository               : "lionelZhaowy/lionelZhaowy.github.io"
 google_scholar_stats_use_cdn : false
 

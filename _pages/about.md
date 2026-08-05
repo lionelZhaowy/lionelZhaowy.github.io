@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-description: "赵文尧的学术主页，研究方向包括边缘端 AI 芯片、算法与硬件协同优化及定制处理器 AI 编译器。"
+description: "赵文尧的个人主页，展示边缘端 AI 处理器、定制处理器编译工具链及软硬件协同设计方面的研究与工程实践。"
 author_profile: true
 lang: zh
 redirect_from:
@@ -14,13 +14,13 @@ redirect_from:
   <h1>你好，我是 <span>赵文尧</span>。</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，攻读集成电路科学与工程硕博连读项目，导师为刘力源研究员；本科毕业于合肥工业大学微电子学院。</p>
-    <p>我的研究围绕边缘端智能计算展开，从神经网络模型优化出发，向下延伸至定制处理器的编译映射与芯片部署验证，重点关注 AI 算法、编译器和处理器架构之间的跨层协同。目前，我已参与 3 款课题组自研 ASIC 处理器的算法设计和编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
+    <p>我的工作围绕边缘端智能计算展开，涵盖神经网络模型优化、定制处理器编译映射与芯片部署验证，重点关注 AI 算法、编译器和处理器架构之间的跨层协同。目前，我已参与 3 款课题组自研 ASIC 处理器的算法设计与编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
   </div>
 
-  <div class="research-overview" aria-label="科研概览">
+  <div class="research-overview" aria-label="研究与工程概览">
     <div><strong>3</strong><span>款自研 ASIC<br>算法与部署实践</span></div>
     <div><strong>2</strong><span>款 FPGA<br>加速器设计验证</span></div>
-    <div><strong>2</strong><span>篇学术论文<br>包括合作成果</span></div>
+    <div><strong>2</strong><span>篇已发表论文<br>涵盖算法与加速器</span></div>
   </div>
 </section>
 
@@ -87,7 +87,7 @@ redirect_from:
 
 <section class="home-section" id="publications">
   <header class="section-heading">
-    <div><p>PUBLICATIONS</p><h2>论文与专利</h2></div>
+    <div><p>PUBLICATIONS</p><h2>论文成果</h2></div>
   </header>
   <ol class="publication-list">
     <li>
@@ -101,7 +101,6 @@ redirect_from:
       <p class="publication-list__links"><a href="https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042">网页</a><a href="{{ '/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf' | relative_url }}">PDF</a></p>
     </li>
   </ol>
-  <p class="empty-note">专利：暂无公开条目</p>
 </section>
 
 <section class="home-section" id="honors">

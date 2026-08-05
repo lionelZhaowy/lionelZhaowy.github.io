@@ -34,6 +34,9 @@
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var saveData = Boolean(navigator.connection && navigator.connection.saveData);
     var autoPlay = !reducedMotion && !saveData;
+    var loadQueue = [];
+    var activeLoads = 0;
+    var maxConcurrentLoads = 2;
     var isChinese = (document.documentElement.lang || "").toLowerCase().indexOf("zh") === 0;
     var labels = {
       loading: isChinese ? "正在加载视频" : "Loading video",
@@ -112,6 +115,43 @@
       });
     }
 
+    function drainLoadQueue() {
+      while (activeLoads < maxConcurrentLoads && loadQueue.length) {
+        var video = loadQueue.shift();
+        video.dataset.queued = "false";
+        video.dataset.loading = "true";
+        activeLoads += 1;
+
+        var released = false;
+        var timeoutId;
+        function releaseSlot() {
+          if (released) return;
+          released = true;
+          window.clearTimeout(timeoutId);
+          video.dataset.loading = "false";
+          activeLoads -= 1;
+          drainLoadQueue();
+        }
+
+        video.addEventListener("loadeddata", releaseSlot, { once: true });
+        video.addEventListener("error", releaseSlot, { once: true });
+        timeoutId = window.setTimeout(releaseSlot, 12000);
+        loadVideo(video);
+        if (autoPlay && video.dataset.nearViewport === "true") playVideo(video);
+      }
+    }
+
+    function requestVideo(video) {
+      if (video.dataset.loading === "true" || video.dataset.queued === "true") return;
+      if (video.dataset.loaded === "true") {
+        if (autoPlay && video.dataset.nearViewport === "true") playVideo(video);
+        return;
+      }
+      video.dataset.queued = "true";
+      loadQueue.push(video);
+      drainLoadQueue();
+    }
+
     videos.forEach(function (video) {
       prepareFrame(video);
       video.muted = true;
@@ -124,8 +164,8 @@
 
     if (!("IntersectionObserver" in window)) {
       videos.forEach(function (video) {
-        loadVideo(video);
-        if (autoPlay) playVideo(video);
+        video.dataset.nearViewport = "true";
+        requestVideo(video);
       });
       return;
     }
@@ -134,13 +174,14 @@
       entries.forEach(function (entry) {
         var video = entry.target;
         if (entry.isIntersecting) {
-          loadVideo(video);
-          if (autoPlay) playVideo(video);
+          video.dataset.nearViewport = "true";
+          requestVideo(video);
         } else {
+          video.dataset.nearViewport = "false";
           video.pause();
         }
       });
-    }, { rootMargin: "260px 0px", threshold: 0.1 });
+    }, { rootMargin: "120px 0px", threshold: 0.1 });
 
     videos.forEach(function (video) { observer.observe(video); });
   }

@@ -1,7 +1,7 @@
 ---
 permalink: /en/
 title: ""
-description: "Academic homepage of Wenyao Zhao, whose research focuses on edge AI processors, algorithm-hardware co-design, and AI compilers for custom architectures."
+description: "Personal website of Wenyao Zhao, featuring research and engineering work on edge AI processors, compiler toolchains for custom architectures, and hardware–software co-design."
 author_profile: true
 lang: en
 redirect_from:
@@ -13,14 +13,14 @@ redirect_from:
   <p class="section-eyebrow">ABOUT ME · EDGE AI AND CUSTOM COMPUTING</p>
   <h1>Hello, I’m <span>Wenyao Zhao</span>.</h1>
   <div class="home-hero__intro">
-    <p class="home-hero__lead">I am a graduate student in the combined M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
-    <p>My research centers on edge AI computing, starting from neural-network optimization and extending down the stack to compiler mapping and on-chip deployment for custom processors. I am particularly interested in cross-layer co-design across AI algorithms, compilers, and processor architectures. I have contributed to algorithm design and compilation for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
+    <p class="home-hero__lead">I am a graduate student in the integrated M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
+    <p>My work focuses on edge AI computing, spanning neural-network optimization, compiler mapping, and on-chip deployment for custom processors. I am particularly interested in cross-layer co-design among AI models, compilers, and processor architectures. To date, I have contributed to algorithm development and compiler deployment for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
   </div>
 
-  <div class="research-overview" aria-label="Research overview">
+  <div class="research-overview" aria-label="Research and engineering overview">
     <div><strong>3</strong><span>custom ASICs<br>algorithm and deployment work</span></div>
     <div><strong>2</strong><span>FPGA accelerators<br>designed and verified</span></div>
-    <div><strong>2</strong><span>academic papers<br>including collaborations</span></div>
+    <div><strong>2</strong><span>peer-reviewed papers<br>on algorithms and accelerators</span></div>
   </div>
 </section>
 
@@ -87,7 +87,7 @@ redirect_from:
 
 <section class="home-section" id="publications">
   <header class="section-heading">
-    <div><p>PUBLICATIONS</p><h2>Publications & Patents</h2></div>
+    <div><p>PUBLICATIONS</p><h2>Publications</h2></div>
   </header>
   <ol class="publication-list">
     <li>
@@ -101,7 +101,6 @@ redirect_from:
       <p class="publication-list__links"><a href="https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042">Web</a><a href="{{ '/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf' | relative_url }}">PDF</a></p>
     </li>
   </ol>
-  <p class="empty-note">Patents: no public entries at present.</p>
 </section>
 
 <section class="home-section" id="honors">
