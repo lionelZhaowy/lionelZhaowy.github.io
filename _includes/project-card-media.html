@@ -6,7 +6,6 @@
 
 {% if is_video %}
   <video class="project-card__media lazy-video" muted loop playsinline preload="none"
-         {% if project.poster %}poster="{{ project.poster | relative_url }}"{% endif %}
          aria-label="{{ project.title | escape }}">
     <source data-src="{{ project.teaser | relative_url }}" type="{% if project.teaser contains '.webm' %}video/webm{% else %}video/mp4{% endif %}">
   </video>

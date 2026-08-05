@@ -54,14 +54,17 @@ AcadHomepage
 
 ## 本地调试
 
-1. 使用`git clone`将本项目克隆到本地。
-1. 安装Jekyll的构建环境，包括`Ruby`、`RubyGems`、`GCC`和`Make`。可参考[该教程](https://jekyllrb.com/docs/installation/#requirements)。
-1. 运行 `bash run_server.sh` 来启动Jekyll实时重载服务器。
-1. 在浏览器里打开 [http://127.0.0.1:4000](http://127.0.0.1:4000)。如果你修改了网页的源码，服务器会自动重新编译并刷新页面。
-1. 当你修改完毕你的页面以后, 使用`git`命令，`commit`你的改动并`push`到你的github仓库中。
+当前依赖锁文件使用 Ruby 3.1、Bundler 2.3.24 和 GitHub Pages 227（Jekyll 3.9.2）。Windows 环境建议安装带 Devkit 的 RubyInstaller 3.1，以便编译文件监听等原生扩展。
+
+1. 使用 `git clone` 将本项目克隆到本地。
+1. 在项目目录运行 `gem install bundler -v 2.3.24 --no-document`。
+1. 运行 `bundle _2.3.24_ install` 安装锁定依赖。
+1. Windows 运行 `run_server.bat`；Linux/macOS 运行 `sh run_server.sh`。
+1. 在浏览器打开 [http://127.0.0.1:4000](http://127.0.0.1:4000)。修改源码后，Jekyll 会重新构建并触发页面刷新。
+
+如需仅验证生产构建，可运行 `bundle _2.3.24_ exec jekyll build`，输出位于 `_site`。
 
 # Acknowledges
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
 - AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
 - AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.

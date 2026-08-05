@@ -34,6 +34,64 @@
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var saveData = Boolean(navigator.connection && navigator.connection.saveData);
     var autoPlay = !reducedMotion && !saveData;
+    var isChinese = (document.documentElement.lang || "").toLowerCase().indexOf("zh") === 0;
+    var labels = {
+      loading: isChinese ? "正在加载视频" : "Loading video",
+      error: isChinese ? "视频加载失败，请使用播放控件重试" : "Video failed to load. Use the controls to retry."
+    };
+
+    function prepareFrame(video) {
+      var frame = video.parentElement;
+      var placeholder;
+
+      if (!frame || !frame.classList.contains("lazy-video-frame")) {
+        frame = document.createElement("span");
+        frame.className = "lazy-video-frame";
+
+        var requestedWidth = video.getAttribute("width");
+        if (requestedWidth) {
+          frame.style.width = requestedWidth;
+          video.removeAttribute("width");
+        }
+
+        video.parentNode.insertBefore(frame, video);
+        frame.appendChild(video);
+
+        placeholder = document.createElement("span");
+        placeholder.className = "lazy-video-placeholder";
+        placeholder.setAttribute("role", "status");
+        placeholder.setAttribute("aria-live", "polite");
+        frame.appendChild(placeholder);
+      } else {
+        placeholder = frame.querySelector(".lazy-video-placeholder");
+      }
+
+      placeholder.textContent = labels.loading;
+
+      function markReady() {
+        frame.classList.remove("has-error");
+        frame.classList.add("is-ready");
+        placeholder.setAttribute("aria-hidden", "true");
+      }
+
+      video.addEventListener("loadedmetadata", function () {
+        if (video.videoWidth && video.videoHeight && !video.classList.contains("project-card__media")) {
+          frame.style.aspectRatio = video.videoWidth + " / " + video.videoHeight;
+        }
+      });
+      video.addEventListener("loadeddata", markReady);
+      video.addEventListener("canplay", markReady);
+      video.addEventListener("playing", markReady);
+      video.addEventListener("error", function () {
+        frame.classList.remove("is-ready");
+        frame.classList.add("has-error");
+        placeholder.removeAttribute("aria-hidden");
+        placeholder.textContent = labels.error;
+        video.controls = true;
+      });
+
+      return frame;
+    }
 
     function loadVideo(video) {
       if (video.dataset.loaded === "true") return;
@@ -46,7 +104,14 @@
       video.load();
     }
 
+    function playVideo(video) {
+      video.play().catch(function () {
+        video.controls = true;
+      });
+    }
+
     videos.forEach(function (video) {
+      prepareFrame(video);
       video.muted = true;
       video.playsInline = true;
       if (!autoPlay) {
@@ -58,7 +123,7 @@
     if (!("IntersectionObserver" in window)) {
       videos.forEach(function (video) {
         loadVideo(video);
-        if (autoPlay) video.play().catch(function () {});
+        if (autoPlay) playVideo(video);
       });
       return;
     }
@@ -68,7 +133,7 @@
         var video = entry.target;
         if (entry.isIntersecting) {
           loadVideo(video);
-          if (autoPlay) video.play().catch(function () {});
+          if (autoPlay) playVideo(video);
         } else {
           video.pause();
         }
@@ -78,8 +143,14 @@
     videos.forEach(function (video) { observer.observe(video); });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function initSite() {
     initNavigation();
     initVideos();
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSite);
+  } else {
+    initSite();
+  }
 })();

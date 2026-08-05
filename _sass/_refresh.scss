@@ -507,6 +507,76 @@ video {
   background: var(--soft-blue);
 }
 .project-card__visual picture { display: contents; }
+.lazy-video-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1rem auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(0, 62, 140, 0.045), rgba(13, 156, 171, 0.075)),
+    #f5f8fb;
+}
+.lazy-video-frame > video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  opacity: 0;
+  object-fit: contain;
+  background: transparent !important;
+  transition: opacity 180ms ease;
+}
+.lazy-video-frame.is-ready > video { opacity: 1; }
+.lazy-video-placeholder {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  color: #49647f;
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+.lazy-video-placeholder::before {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border: 2px solid rgba(0, 62, 140, 0.2);
+  border-top-color: var(--cas-blue);
+  border-radius: 50%;
+  content: "";
+  animation: video-loading-spin 800ms linear infinite;
+}
+.lazy-video-frame.is-ready .lazy-video-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+.lazy-video-frame.has-error .lazy-video-placeholder {
+  color: #8a3b3b;
+}
+.lazy-video-frame.has-error .lazy-video-placeholder::before { display: none; }
+.project-card__visual .lazy-video-frame {
+  width: 100% !important;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+@keyframes video-loading-spin { to { transform: rotate(360deg); } }
 .project-card__media {
   display: block;
   width: 100%;
@@ -686,6 +756,10 @@ video {
   display: block;
   margin-inline: auto;
   background: var(--soft-blue);
+}
+.detail-page .page__content .lazy-video-frame > video {
+  max-height: none;
+  border-radius: 7px;
 }
 .optimized-media { display: inline; }
 .optimized-media img { height: auto !important; }
