@@ -10,10 +10,12 @@ redirect_from:
 ---
 
 <section class="home-hero" id="about-me">
-  <p class="section-eyebrow">AI PROCESSOR · COMPILER · CO-DESIGN</p>
-  <h1>Cross-Layer Co-Design of<br><span>AI Models, Compilers, and Custom Processors</span></h1>
-  <p class="home-hero__lead">I am a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology. My research connects low-level processor circuits with efficient AI algorithms through cross-layer co-design.</p>
-  <p>My work spans neural-network optimization, compiler mapping for domain-specific processors, and on-chip deployment. I have contributed to algorithm design and compilation for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
+  <p class="section-eyebrow">ABOUT ME · EDGE AI AND CUSTOM COMPUTING</p>
+  <h1>Hello, I’m <span>Wenyao Zhao</span>.</h1>
+  <div class="home-hero__intro">
+    <p class="home-hero__lead">I am a graduate student in the combined M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
+    <p>My research centers on edge AI computing, starting from neural-network optimization and extending down the stack to compiler mapping and on-chip deployment for custom processors. I am particularly interested in cross-layer co-design across AI algorithms, compilers, and processor architectures. I have contributed to algorithm design and compilation for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
+  </div>
 
   <div class="research-overview" aria-label="Research overview">
     <div><strong>3</strong><span>custom ASICs<br>algorithm and deployment work</span></div>
@@ -28,14 +30,22 @@ redirect_from:
   </header>
   <div class="education-list">
     <article>
-      <time>Sep. 2024 — Present</time>
-      <h3>University of Chinese Academy of Sciences · Institute of Semiconductors, CAS</h3>
-      <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program · Beijing, China</p>
+      <img class="education-list__logo" src="{{ '/images/CAS_logo.svg' | relative_url }}"
+           width="64" height="64" alt="Chinese Academy of Sciences emblem" loading="lazy" decoding="async">
+      <div class="education-list__content">
+        <time>Sep. 2024 — Present</time>
+        <h3>University of Chinese Academy of Sciences · Institute of Semiconductors, CAS</h3>
+        <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program · Beijing, China</p>
+      </div>
     </article>
     <article>
-      <time>Sep. 2020 — Jun. 2024</time>
-      <h3>Hefei University of Technology · School of Microelectronics</h3>
-      <p>B.Eng. in Integrated Circuit Design and Integrated Systems · Hefei, China</p>
+      <img class="education-list__logo" src="{{ '/images/HFUT_logo.svg' | relative_url }}"
+           width="64" height="64" alt="Hefei University of Technology emblem" loading="lazy" decoding="async">
+      <div class="education-list__content">
+        <time>Sep. 2020 — Jun. 2024</time>
+        <h3>Hefei University of Technology · School of Microelectronics</h3>
+        <p>B.Eng. in Integrated Circuit Design and Integrated Systems · Hefei, China</p>
+      </div>
     </article>
   </div>
 </section>

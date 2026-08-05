@@ -10,10 +10,12 @@ redirect_from:
 ---
 
 <section class="home-hero" id="about-me">
-  <p class="section-eyebrow">AI PROCESSOR · COMPILER · CO-DESIGN</p>
-  <h1>面向定制处理器的<br><span>AI 算法—编译器—芯片协同优化</span></h1>
-  <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，导师为刘力源研究员，本科毕业于合肥工业大学微电子学院。研究聚焦处理器底层电路与 AI 算法之间的跨层级协同设计。</p>
-  <p>围绕边缘端智能计算，我持续开展神经网络模型优化、定制处理器编译映射与芯片部署验证，已参与 3 款课题组自研 ASIC 处理器的算法设计和编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
+  <p class="section-eyebrow">ABOUT ME · 边缘智能与定制计算</p>
+  <h1>你好，我是 <span>赵文尧</span>。</h1>
+  <div class="home-hero__intro">
+    <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，攻读集成电路科学与工程硕博连读项目，导师为刘力源研究员；本科毕业于合肥工业大学微电子学院。</p>
+    <p>我的研究围绕边缘端智能计算展开，从神经网络模型优化出发，向下延伸至定制处理器的编译映射与芯片部署验证，重点关注 AI 算法、编译器和处理器架构之间的跨层协同。目前，我已参与 3 款课题组自研 ASIC 处理器的算法设计和编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
+  </div>
 
   <div class="research-overview" aria-label="科研概览">
     <div><strong>3</strong><span>款自研 ASIC<br>算法与部署实践</span></div>
@@ -28,14 +30,22 @@ redirect_from:
   </header>
   <div class="education-list">
     <article>
-      <time>2024.09 — 至今</time>
-      <h3>中国科学院大学 · 中国科学院半导体研究所</h3>
-      <p>集成电路科学与工程，硕博连读 · 北京</p>
+      <img class="education-list__logo" src="{{ '/images/CAS_logo.svg' | relative_url }}"
+           width="64" height="64" alt="中国科学院院徽" loading="lazy" decoding="async">
+      <div class="education-list__content">
+        <time>2024.09 — 至今</time>
+        <h3>中国科学院大学 · 中国科学院半导体研究所</h3>
+        <p>集成电路科学与工程，硕博连读 · 北京</p>
+      </div>
     </article>
     <article>
-      <time>2020.09 — 2024.06</time>
-      <h3>合肥工业大学 · 微电子学院</h3>
-      <p>集成电路设计与集成系统，本科 · 合肥</p>
+      <img class="education-list__logo" src="{{ '/images/HFUT_logo.svg' | relative_url }}"
+           width="64" height="64" alt="合肥工业大学校徽" loading="lazy" decoding="async">
+      <div class="education-list__content">
+        <time>2020.09 — 2024.06</time>
+        <h3>合肥工业大学 · 微电子学院</h3>
+        <p>集成电路设计与集成系统，本科 · 合肥</p>
+      </div>
     </article>
   </div>
 </section>
