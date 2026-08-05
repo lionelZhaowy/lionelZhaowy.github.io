@@ -9,7 +9,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="{% if page.url == '/' or page.url == '/en/' %}home-page{% else %}detail-page{% endif %}">
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -29,14 +29,14 @@ layout: compress
 
     {% include scripts.html %}
 
-<div class="footer_site">
-<hr/>
-<div class="footer_copyright">
-  © 2026 国科大 · 赵文尧 | 基于&nbsp
-  <a class="page_a"  href="https://github.com/RayeRen/acad-homepage.github.io">
-  acad
-  </a>&nbsp模板
-</div>
-</div>
+    <footer class="footer_site">
+      <div class="footer_copyright">
+        {% if page.lang == 'en' %}
+          © {{ site.time | date: '%Y' }} Wenyao Zhao · Academic homepage
+        {% else %}
+          © {{ site.time | date: '%Y' }} 赵文尧 · 学术主页
+        {% endif %}
+      </div>
+    </footer>
   </body>
 </html>

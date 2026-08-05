@@ -1,0 +1,22 @@
+{% assign project = include.project %}
+{% assign is_video = false %}
+{% if project.teaser contains '.mp4' or project.teaser contains '.webm' %}
+  {% assign is_video = true %}
+{% endif %}
+
+{% if is_video %}
+  <video class="project-card__media lazy-video" muted loop playsinline preload="none"
+         {% if project.poster %}poster="{{ project.poster | relative_url }}"{% endif %}
+         aria-label="{{ project.title | escape }}">
+    <source data-src="{{ project.teaser | relative_url }}" type="{% if project.teaser contains '.webm' %}video/webm{% else %}video/mp4{% endif %}">
+  </video>
+  <span class="project-card__media-status" aria-hidden="true">Video</span>
+{% elsif project.teaser %}
+  <picture>
+    {% if project.teaser_webp %}<source srcset="{{ project.teaser_webp | relative_url }}" type="image/webp">{% endif %}
+    <img class="project-card__media" src="{{ project.teaser | relative_url }}" alt="{{ project.title | escape }}"
+         width="640" height="360" loading="lazy" decoding="async">
+  </picture>
+{% else %}
+  <img class="project-card__media" src="{{ '/images/500x300.png' | relative_url }}" alt="" width="640" height="360" loading="lazy" decoding="async">
+{% endif %}

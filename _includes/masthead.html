@@ -1,55 +1,44 @@
-<div class="masthead">
+{% assign is_en = false %}
+{% if page.lang == 'en' %}{% assign is_en = true %}{% endif %}
+
+{% if is_en %}
+  {% assign nav = site.data.navigation_en.main %}
+  {% if page.url contains '/en/projects/' %}
+    {% assign language_url = page.url | replace_first: '/en/projects/', '/projects/' %}
+  {% else %}
+    {% assign language_url = '/' %}
+  {% endif %}
+{% else %}
+  {% assign nav = site.data.navigation.main %}
+  {% if page.url contains '/projects/' %}
+    {% assign language_url = page.url | replace_first: '/projects/', '/en/projects/' %}
+  {% else %}
+    {% assign language_url = '/en/' %}
+  {% endif %}
+{% endif %}
+
+<header class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+    <a class="site-brand" href="{% if is_en %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+      <span class="site-brand__mark" aria-hidden="true">WZ</span>
+      <span>
+        <strong>{% if is_en %}Wenyao Zhao{% else %}赵文尧{% endif %}</strong>
+        <small>{% if is_en %}Academic Homepage{% else %}Academic Homepage{% endif %}</small>
+      </span>
+    </a>
 
-        {%- comment -%}
-        移除顶部站点标题（姓名），避免与侧边栏 author-profile 重复。
-        如需恢复，可改回 <a class="site-title" ...> 块。
-        {%- endcomment -%}
-
-        <ul class="visible-links">
-
-          {%- comment -%}
-          更可靠的语言判定：优先使用页面 front matter 中的 page.lang。
-          兼容旧逻辑：若未设置 lang，则回退到根据 URL 是否包含 /en/ 来判断。
-          {%- endcomment -%}
-          {% assign is_en = false %}
-          {% if page.lang %}
-            {% if page.lang == 'en' %}{% assign is_en = true %}{% endif %}
-          {% else %}
-            {% assign is_en = page.url contains '/en/' %}
-          {% endif %}
-
-          {% if is_en %}
-            {% assign nav = site.data.navigation_en.main %}
-          {% else %}
-            {% assign nav = site.data.navigation.main %}
-          {% endif %}
-
-          {% for link in nav %}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
-          {% endfor %}
-
-        </ul>
-
-        {%- comment -%}Language switch fixed at the far right{%- endcomment -%}
-        <div class="masthead__lang">
-          {% if is_en %}
-            <a class="masthead__lang-link" href="{{ '/' | relative_url }}">中文</a>
-          {% else %}
-            <a class="masthead__lang-link" href="{{ '/en/' | relative_url }}">English</a>
-          {% endif %}
-        </div>
-
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+    <nav class="site-nav" aria-label="{% if is_en %}Primary navigation{% else %}主导航{% endif %}">
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
+        <span>{% if is_en %}Menu{% else %}菜单{% endif %}</span>
+      </button>
+      <ul id="site-nav-links" class="site-nav__links">
+        {% for link in nav %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <a class="site-nav__language" href="{{ language_url | relative_url }}" hreflang="{% if is_en %}zh-CN{% else %}en{% endif %}">
+        {% if is_en %}中文{% else %}EN{% endif %}
+      </a>
+    </nav>
   </div>
-</div>
+</header>

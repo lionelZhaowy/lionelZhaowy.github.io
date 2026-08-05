@@ -26,13 +26,14 @@ author:
   name             : "赵文尧"
   name_en          : "Wenyao Zhao"
   avatar           : "images/Zhaowy_profile.jpg"
+  avatar_webp      : "images/Zhaowy_profile-480.webp"
   bio              : "中国科学院大学，中国科学院半导体研究所"
   bio_en           : "University of Chinese Academy of Sciences (UCAS), Institute of Semiconductors, CAS"
   location         : "北京"
   location_en      : "Beijing, China"
   employer         : #"Hefei General Machinery Research Institute"
   pubmed           : 
-  googlescholar    : #"https://scholar.google.com/citations?user=WMkMTb4AAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=WMkMTb4AAAAJ"
   email            : "zhaowenyao@semi.ac.cn"
   researchgate     : #"https://www.researchgate.net/profile/Jian-Tang-53"
   uri              : 
@@ -43,6 +44,16 @@ author:
   facebook         :
   foursquare       :
   github           : "lionelZhaowy"
+  focus:
+    - "边缘端 AI 推理芯片"
+    - "算法与硬件协同优化"
+    - "定制处理器 AI 编译器"
+    - "感算一体化视觉芯片"
+  focus_en:
+    - "Edge AI inference chips"
+    - "Algorithm-hardware co-design"
+    - "AI compilers for custom processors"
+    - "Near-sensor vision processors"
   google_plus      :
   keybase          :
   instagram        :
@@ -87,8 +98,6 @@ exclude:
   - README
   - Rakefile
   - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
   - config
   - gulpfile.js
   - log

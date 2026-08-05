@@ -1,128 +1,110 @@
 ---
 permalink: /en/
 title: ""
-excerpt: ""
+description: "Academic homepage of Wenyao Zhao, whose research focuses on edge AI processors, algorithm-hardware co-design, and AI compilers for custom architectures."
 author_profile: true
 lang: en
-redirect_from: 
+redirect_from:
   - /en/about/
   - /en/about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+<section class="home-hero" id="about-me">
+  <p class="section-eyebrow">AI PROCESSOR · COMPILER · CO-DESIGN</p>
+  <h1>Cross-Layer Co-Design of<br><span>AI Models, Compilers, and Custom Processors</span></h1>
+  <p class="home-hero__lead">I am a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology. My research connects low-level processor circuits with efficient AI algorithms through cross-layer co-design.</p>
+  <p>My work spans neural-network optimization, compiler mapping for domain-specific processors, and on-chip deployment. I have contributed to algorithm design and compilation for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
 
-<span class='anchor' id='about-me'></span>
-
-I am currently a graduate student at the Institute of Semiconductors, Chinese Academy of Sciences(CAS), advised by Prof. Liyuan Liu. I received my B.Eng. degree from the School of Microelectronics, Hefei University of Technology(HFUT). My research primarily focuses on the intersection of artificial intelligence and computer architecture, specifically including:
-- Edge AI inference chips
-- Algorithm–hardware co-optimization for DNNs
-- Domain-specific AI compilers for custom processors
-- Near-sensor computing smart vision chips
-
-I have been deeply involved in the algorithm design, compilation and deployment for 3 in-house custom Application-Specific Integrated Circuits (ASICs), as well as the architecture design of 2 FPGA-based AI accelerators. To date, I have contributed to 2 academic publications (including co-authored works).
-<a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=Citations"></a>
-
-
-
-<span class='anchor' id='education'></span>
-
-# 🎓 Education
-- *2024.09 - Present*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> University of Chinese Academy of Sciences (UCAS) & <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> Institute of Semiconductors, CAS, Integrated Circuit Science and Engineering, Beijing, China
-- *2020.09 - 2024.06*, <a href="https://www.hfut.edu.cn/"><img class="svg" src="/images/HFUT_logo.svg" width="23pt"></a> Hefei University of Technology, School of Microelectronics, Integrated Circuit Design and Integrated Systems, Hefei, China
-
-
-
-<span class='anchor' id='projects'></span>
-
-# 🧩 Projects
-
-
-{% assign items = site.projects_en | sort: 'order' %}
-{% if items and items.size > 0 %}
-
-<div class="project-cards">
-  {% for p in items %}
-  <div class="project-card">
-    <div class="project-thumbnail">
-      {% if p.teaser %}
-        {% if p.teaser contains '.mp4' or p.teaser contains '.webm' %}
-          <video class="project-video-thumb" autoplay loop muted playsinline webkit-playsinline>
-            <source src="{{ p.teaser | relative_url }}?v=1" type="video/mp4">
-          </video>
-        {% else %}
-          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}" loading="lazy">
-        {% endif %}
-      {% else %}
-        <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
-      {% endif %}
-    </div>
-    <div class="project-info">
-      <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-      {% if p.period %}
-        <div class="project-meta">
-          <i class="fas fa-calendar-alt"></i> {{ p.period }}
-        </div>
-      {% endif %}
-      {% if p.summary %}
-        <div class="project-summary">{{ p.summary }}</div>
-      {% endif %}
-      <div class="project-tags">
-        {% if p.role %}<span><i class="fas fa-user-tag"></i> {{ p.role }}</span>{% endif %}
-        {% if p.tech %}<span><i class="fas fa-microchip"></i> {{ p.tech | join: ' / ' }}</span>{% endif %}
-      </div>
-    </div>
+  <div class="research-overview" aria-label="Research overview">
+    <div><strong>3</strong><span>custom ASICs<br>algorithm and deployment work</span></div>
+    <div><strong>2</strong><span>FPGA accelerators<br>designed and verified</span></div>
+    <div><strong>2</strong><span>academic papers<br>including collaborations</span></div>
   </div>
-  {% endfor %}
-</div>
-{% else %}
-- None yet. (Add files under `_projects_en/`.)
-{% endif %}
+</section>
 
+<section class="home-section" id="education">
+  <header class="section-heading">
+    <div><p>EDUCATION</p><h2>Education</h2></div>
+  </header>
+  <div class="education-list">
+    <article>
+      <time>Sep. 2024 — Present</time>
+      <h3>University of Chinese Academy of Sciences · Institute of Semiconductors, CAS</h3>
+      <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program · Beijing, China</p>
+    </article>
+    <article>
+      <time>Sep. 2020 — Jun. 2024</time>
+      <h3>Hefei University of Technology · School of Microelectronics</h3>
+      <p>B.Eng. in Integrated Circuit Design and Integrated Systems · Hefei, China</p>
+    </article>
+  </div>
+</section>
 
-<span class='anchor' id='publications'></span>
+<section class="home-section" id="projects">
+  <header class="section-heading">
+    <div><p>SELECTED PROJECTS</p><h2>Selected Projects</h2></div>
+    <span>End-to-end work across models, compilers, and hardware</span>
+  </header>
 
-# 📝 Publications & Patents
+  {% assign items = site.projects_en | sort: 'order' %}
+  <div class="project-grid">
+    {% for p in items limit: 4 %}
+      <article class="project-card">
+        <a class="project-card__visual" href="{{ p.url | relative_url }}" aria-label="View project: {{ p.title }}">
+          {% include project-card-media.html project=p %}
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__meta"><span>{{ p.period }}</span><span>{{ p.role }}</span></p>
+          <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          <p class="project-card__summary">{{ p.summary }}</p>
+          <ul class="project-card__tags" aria-label="Technologies">
+            {% for tag in p.tech limit: 3 %}<li>{{ tag }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 
-### Journal / Conference
----
-- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. An energy-efficient dehazing neural network accelerator based on E2 AOD-Net. *Journal of Real-Time Image Processing*, 2024, 21(6): 197. (JCR: Q2; IF: 3.0) [[web]](https://link.springer.com/article/10.1007/s11554-024-01574-x)[[pdf]](/images/project/202305-202309-MicroHFUT/s11554-024-01574-x.pdf)
+  <div class="other-projects">
+    <h3>Additional Projects</h3>
+    <ul>
+      {% for p in items offset: 4 %}
+        <li><a href="{{ p.url | relative_url }}"><span>{{ p.period }}</span><strong>{{ p.title }}</strong></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
 
+<section class="home-section" id="publications">
+  <header class="section-heading">
+    <div><p>PUBLICATIONS</p><h2>Publications & Patents</h2></div>
+  </header>
+  <ol class="publication-list">
+    <li>
+      <span class="publication-list__year">2024</span>
+      <div><strong>An Energy-Efficient Dehazing Neural Network Accelerator Based on E2 AOD-Net</strong><p>Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, <b>Wenyao Zhao</b>, Xiaolei Wang · <i>Journal of Real-Time Image Processing</i>, 21(6): 197 · JCR Q2, IF 3.0</p></div>
+      <p class="publication-list__links"><a href="https://link.springer.com/article/10.1007/s11554-024-01574-x">Web</a><a href="{{ '/images/project/202305-202309-MicroHFUT/s11554-024-01574-x.pdf' | relative_url }}">PDF</a></p>
+    </li>
+    <li>
+      <span class="publication-list__year">2024</span>
+      <div><strong>An Overview of Joint Optimization Methods for Neural Network Compression</strong><p>Xin Ning, <b>Wenyao Zhao</b>, Yixin Zong, et al. · <i>CAAI Transactions on Intelligent Systems</i>, 19(1): 36–57 · PKU Core, CCF-C</p></div>
+      <p class="publication-list__links"><a href="https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042">Web</a><a href="{{ '/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf' | relative_url }}">PDF</a></p>
+    </li>
+  </ol>
+  <p class="empty-note">Patents: no public entries at present.</p>
+</section>
 
-- NING Xin, ZHAO Wenyao, ZONG Yixin, et al. An overview of the joint optimization method for neural network compression[J]. CAAI Transactions on Intelligent Systems, 2024, 19(1): 36-57. (PKU Core; IF:2.839; CCF-C) [[web]](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[[pdf]](/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf)
-
-
-### Patents
----
-- (To be updated)
-
-
-
-
-
-<span class='anchor' id='honors'></span>
-
-# 🏅 Honors & Awards
-- *2025.06* Merit Student, UCAS
-- *2024.06* President's Award, HFUT; Outstanding Graduate of Anhui Province
-- *2023.12* National Scholarship; First-Class Scholarship & Outstanding Merit Student, HFUT
-- *2023.08* Third Prize, National College Student Integrated Circuit Innovation and Entrepreneurship Competition (Central China Division)
-- *2023.05* First Prize, Anhui Provincial Robotics Competition (MCU & Embedded Systems Track)
-- *2022.12* First-Class Scholarship & Merit Student, HFUT
-- *2021.12* Second-Class Scholarship & Merit Student, HFUT
-
-
-
-
-
-{% if false %}{% endif %}
-
-
-
-
-
-{% if false %}{% endif %}
+<section class="home-section" id="honors">
+  <header class="section-heading">
+    <div><p>HONORS</p><h2>Honors & Awards</h2></div>
+  </header>
+  <ol class="timeline-list">
+    <li><time>Jun. 2025</time><span>Merit Student, University of Chinese Academy of Sciences</span></li>
+    <li><time>Jun. 2024</time><span>President's Award, HFUT; Outstanding Graduate of Anhui Province</span></li>
+    <li><time>Dec. 2023</time><span>National Scholarship; First-Class Scholarship; Outstanding Merit Student, HFUT</span></li>
+    <li><time>Aug. 2023</time><span>Third Prize, National College Student Integrated Circuit Innovation and Entrepreneurship Competition, Central China Division</span></li>
+    <li><time>May 2023</time><span>First Prize, Anhui Provincial Robotics Competition, MCU and Embedded Systems Track</span></li>
+    <li><time>Dec. 2022</time><span>First-Class Scholarship and Merit Student, HFUT</span></li>
+    <li><time>Dec. 2021</time><span>Second-Class Scholarship and Merit Student, HFUT</span></li>
+  </ol>
+</section>

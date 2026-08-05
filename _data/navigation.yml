@@ -14,9 +14,3 @@ main:
 
   - title: "荣誉奖项"
     url: "/#honors"
-
-  - title: "学术会议"
-    url: "/#activities"
-
-  - title: "工作实习"
-    url: "/#internships"

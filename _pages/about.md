@@ -1,143 +1,110 @@
 ---
 permalink: /
 title: ""
-excerpt: ""
+description: "赵文尧的学术主页，研究方向包括边缘端 AI 芯片、算法与硬件协同优化及定制处理器 AI 编译器。"
 author_profile: true
 lang: zh
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+<section class="home-hero" id="about-me">
+  <p class="section-eyebrow">AI PROCESSOR · COMPILER · CO-DESIGN</p>
+  <h1>面向定制处理器的<br><span>AI 算法—编译器—芯片协同优化</span></h1>
+  <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，导师为刘力源研究员，本科毕业于合肥工业大学微电子学院。研究聚焦处理器底层电路与 AI 算法之间的跨层级协同设计。</p>
+  <p>围绕边缘端智能计算，我持续开展神经网络模型优化、定制处理器编译映射与芯片部署验证，已参与 3 款课题组自研 ASIC 处理器的算法设计和编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
 
-<span class='anchor' id='about-me'></span>
-
-我目前就读于中国科学院半导体研究所，导师为刘力源研究员。本科毕业于合肥工业大学微电子学院。我的主要研究兴趣聚焦于处理器底层电路与AI算法的跨层级协同优化，具体研究领域包括: 
-- 边缘端AI推理芯片
-- 神经网络算法与硬件协同优化
-- 面向定制化处理器的AI模型编译器
-- 感算一体化智能视觉芯片
-
-在科研实践中，我深度参与了课题组 3 款自研ASIC处理器的算法设计和编译部署工作，并完成了 2 款基于FPGA的AI加速器设计与验证。迄今为止，已在相关领域发表(包括合作) 2 篇学术论文。
-<a href='https://scholar.google.com/citations?user=WMkMTb4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a>。
-
-
-
-<span class='anchor' id='education'></span>
-
-# 🎓 学历
-- *2024.09 - 至今*, <a href="https://www.ucas.ac.cn//"><img class="svg" src="/images/CAS_logo.svg" width="20pt"></a> 中国科学院大学, <a href="https://www.semi.ac.cn///"><img class="svg" src="/images/SEMI_logo.png" width="20pt"></a> 中国科学院半导体研究所, 集成电路科学与工程, 北京, 硕博连读
-- *2020.09 - 2024.06*, <a href="https://www.hfut.edu.cn/"><img class="svg" src="/images/HFUT_logo.svg" width="23pt"></a> 合肥工业大学 微电子学院, 集成电路设计与集成系统, 安徽合肥, 本科
- 
-
-
-<span class='anchor' id='projects'></span>
-
-# 🧩 项目经历
-
-
-{% assign items = site.projects | sort: 'order' %}
-{% if items and items.size > 0 %}
-
-<div class="project-cards">
-  {% for p in items %}
-  <div class="project-card">
-    <div class="project-thumbnail">
-      {% if p.teaser %}
-        {% if p.teaser contains '.mp4' or p.teaser contains '.webm' %}
-          <video class="project-video-thumb" autoplay loop muted playsinline webkit-playsinline>
-            <source src="{{ p.teaser | relative_url }}?v=1" type="video/mp4">
-          </video>
-        {% else %}
-          <img src="{{ p.teaser | relative_url }}" alt="{{ p.title }}" loading="lazy">
-        {% endif %}
-      {% else %}
-        <img src="{{ '/images/500x300.png' | relative_url }}" alt="Placeholder">
-      {% endif %}
-    </div>
-    <div class="project-info">
-      <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-      {% if p.period %}
-        <div class="project-meta">
-          <i class="fas fa-calendar-alt"></i> {{ p.period }}
-        </div>
-      {% endif %}
-      {% if p.summary %}
-        <div class="project-summary">{{ p.summary }}</div>
-      {% endif %}
-      <div class="project-tags">
-        {% if p.role %}<span><i class="fas fa-user-tag"></i> {{ p.role }}</span>{% endif %}
-        {% if p.tech %}<span><i class="fas fa-microchip"></i> {{ p.tech | join: ' / ' }}</span>{% endif %}
-      </div>
-    </div>
+  <div class="research-overview" aria-label="科研概览">
+    <div><strong>3</strong><span>款自研 ASIC<br>算法与部署实践</span></div>
+    <div><strong>2</strong><span>款 FPGA<br>加速器设计验证</span></div>
+    <div><strong>2</strong><span>篇学术论文<br>包括合作成果</span></div>
   </div>
-  {% endfor %}
-</div>
-{% else %}
-- 暂无（请在 `_projects/` 下新增项目文件）
-{% endif %}
+</section>
 
+<section class="home-section" id="education">
+  <header class="section-heading">
+    <div><p>EDUCATION</p><h2>教育经历</h2></div>
+  </header>
+  <div class="education-list">
+    <article>
+      <time>2024.09 — 至今</time>
+      <h3>中国科学院大学 · 中国科学院半导体研究所</h3>
+      <p>集成电路科学与工程，硕博连读 · 北京</p>
+    </article>
+    <article>
+      <time>2020.09 — 2024.06</time>
+      <h3>合肥工业大学 · 微电子学院</h3>
+      <p>集成电路设计与集成系统，本科 · 合肥</p>
+    </article>
+  </div>
+</section>
 
-<span class='anchor' id='publications'></span>
+<section class="home-section" id="projects">
+  <header class="section-heading">
+    <div><p>SELECTED PROJECTS</p><h2>代表项目</h2></div>
+    <span>算法、编译与硬件的端到端实践</span>
+  </header>
 
-# 📝 论文专利
+  {% assign items = site.projects | sort: 'order' %}
+  <div class="project-grid">
+    {% for p in items limit: 4 %}
+      <article class="project-card">
+        <a class="project-card__visual" href="{{ p.url | relative_url }}" aria-label="查看项目：{{ p.title }}">
+          {% include project-card-media.html project=p %}
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__meta"><span>{{ p.period }}</span><span>{{ p.role }}</span></p>
+          <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          <p class="project-card__summary">{{ p.summary }}</p>
+          <ul class="project-card__tags" aria-label="技术标签">
+            {% for tag in p.tech limit: 3 %}<li>{{ tag }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 
-### 英文
----
+  <div class="other-projects">
+    <h3>其他项目经历</h3>
+    <ul>
+      {% for p in items offset: 4 %}
+        <li><a href="{{ p.url | relative_url }}"><span>{{ p.period }}</span><strong>{{ p.title }}</strong></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
 
-- Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, `Wenyao Zhao`, Xiaolei Wang. An energy-efficient dehazing neural network accelerator based on E2 AOD-Net[J]. Journal of Real-Time Image Processing, 2024, 21(6): 197. (JCR:Q2; IF:3.0) [[网页]](https://link.springer.com/article/10.1007/s11554-024-01574-x)[[pdf]](/images/project/202305-202309-MicroHFUT/s11554-024-01574-x.pdf)
+<section class="home-section" id="publications">
+  <header class="section-heading">
+    <div><p>PUBLICATIONS</p><h2>论文与专利</h2></div>
+  </header>
+  <ol class="publication-list">
+    <li>
+      <span class="publication-list__year">2024</span>
+      <div><strong>An energy-efficient dehazing neural network accelerator based on E2 AOD-Net</strong><p>Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, <b>Wenyao Zhao</b>, Xiaolei Wang · <i>Journal of Real-Time Image Processing</i>, 21(6): 197 · JCR Q2, IF 3.0</p></div>
+      <p class="publication-list__links"><a href="https://link.springer.com/article/10.1007/s11554-024-01574-x">网页</a><a href="{{ '/images/project/202305-202309-MicroHFUT/s11554-024-01574-x.pdf' | relative_url }}">PDF</a></p>
+    </li>
+    <li>
+      <span class="publication-list__year">2024</span>
+      <div><strong>神经网络压缩联合优化方法的研究综述</strong><p>宁欣，<b>赵文尧</b>，宗易昕，等 · 《智能系统学报》19(1): 36–57 · 核心期刊，CCF-C</p></div>
+      <p class="publication-list__links"><a href="https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042">网页</a><a href="{{ '/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf' | relative_url }}">PDF</a></p>
+    </li>
+  </ol>
+  <p class="empty-note">专利：暂无公开条目</p>
+</section>
 
-
-
-
-### 中文
----
-
-- 宁欣, `赵文尧`, 宗易昕, 张玉贵, 陈灏, 周琦, 马骏骁. 神经网络压缩联合优化方法的研究综述[J]. 智能系统学报, 2024, 19(1): 3657. (核心期刊; IF:2.839; CCF-C) [[网页]](https://tis.hrbeu.edu.cn/oa/darticle.aspx?type=view&id=202306042)[[pdf]](/images/project/202207-202307-SEMI/NN_Compression_Survey.pdf)
-
-
-
-
-### 专利
----
-- 暂无
-
-
-
-
-
-
-
-<span class='anchor' id='honors'></span>
-
-# 🏅 荣誉奖项
-- *2025.06* 获得 中国科学院大学获`三好学生`
-- *2024.06* 获得 合肥工业大学`校长奖`、安徽省`优秀毕业生`
-- *2023.12* 获得 `国家奖学金`、校级`一等奖学金`、校级`优秀三好学生`
-- *2023.08* 获得 全国大学生集成电路创新创业大赛华中赛区`三等奖`
-- *2023.05* 获得 安徽省机器人大赛单片机与嵌入式赛道`一等奖`
-- *2022.12* 获得 合肥工业大学校级`一等奖学金`、校级`三好学生`
-- *2021.12* 获得 合肥工业大学校级`二等奖学金`、校级`三好学生`
-
-
-
-
-
-
-
-{% if false %}{% endif %}
-
-
-
-
-
-
-
-
-{% if false %}{% endif %}
+<section class="home-section" id="honors">
+  <header class="section-heading">
+    <div><p>HONORS</p><h2>荣誉奖项</h2></div>
+  </header>
+  <ol class="timeline-list">
+    <li><time>2025.06</time><span>中国科学院大学三好学生</span></li>
+    <li><time>2024.06</time><span>合肥工业大学校长奖、安徽省优秀毕业生</span></li>
+    <li><time>2023.12</time><span>国家奖学金、校级一等奖学金、校级优秀三好学生</span></li>
+    <li><time>2023.08</time><span>全国大学生集成电路创新创业大赛华中赛区三等奖</span></li>
+    <li><time>2023.05</time><span>安徽省机器人大赛单片机与嵌入式赛道一等奖</span></li>
+    <li><time>2022.12</time><span>合肥工业大学一等奖学金、校级三好学生</span></li>
+    <li><time>2021.12</time><span>合肥工业大学二等奖学金、校级三好学生</span></li>
+  </ol>
+</section>
