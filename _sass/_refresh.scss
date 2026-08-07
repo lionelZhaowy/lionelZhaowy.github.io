@@ -688,7 +688,7 @@ video {
 .other-projects h3 {
   margin: 0 0 9px;
   color: var(--ink-strong);
-  font-size: 0.84rem;
+  font-size: 0.94rem;
 }
 .other-projects ul { margin: 0; padding: 0; list-style: none; }
 .other-projects li { margin: 0; border-top: 1px solid #edf1f5; }
@@ -702,8 +702,8 @@ video {
   text-decoration: none;
 }
 .other-projects a:hover strong { color: var(--cas-blue); }
-.other-projects span { color: var(--muted); font-size: 0.67rem; }
-.other-projects strong { font-size: 0.75rem; font-weight: 650; }
+.other-projects span { color: var(--muted); font-size: 0.75rem; }
+.other-projects strong { font-size: 0.84rem; font-weight: 650; }
 
 .publication-list,
 .timeline-list {
@@ -725,12 +725,12 @@ video {
   font-size: 1.1rem;
   font-weight: 750;
 }
-.publication-list strong { color: var(--ink-strong); font-size: 0.84rem; }
+.publication-list strong { color: var(--ink-strong); font-size: 0.94rem; }
 .publication-list li div p {
   margin: 5px 0 0;
   color: var(--muted);
-  font-size: 0.71rem;
-  line-height: 1.65;
+  font-size: 0.80rem;
+  line-height: 1.55;
 }
 .publication-list__links {
   display: flex;
@@ -741,12 +741,12 @@ video {
   padding: 4px 7px;
   border: 1px solid #c9d7e5;
   border-radius: 5px;
-  font-size: 0.62rem;
+  font-size: 0.67rem;
   font-weight: 750;
   text-decoration: none;
   text-transform: uppercase;
 }
-.empty-note { color: var(--muted); font-size: 0.72rem; }
+.empty-note { color: var(--muted); font-size: 0.80rem; }
 
 .timeline-list li {
   display: grid;
@@ -754,7 +754,8 @@ video {
   border-top: 1px solid #edf1f5;
   grid-template-columns: 100px 1fr;
   gap: 16px;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 .timeline-list time { color: var(--cas-blue); font-weight: 750; }
 
@@ -895,6 +896,13 @@ video {
   .education-list article { grid-template-columns: 52px minmax(0, 1fr); gap: 12px; }
   .education-list__logo { width: 52px; height: 52px; }
   .timeline-list li { grid-template-columns: 82px 1fr; gap: 10px; }
+}
+
+/* Image / video captions in project detail pages */
+.image-caption {
+  color: #666;
+  font-size: 0.875rem;
+  padding-top: 5px;
 }
 
 @media (prefers-reduced-motion: reduce) {
