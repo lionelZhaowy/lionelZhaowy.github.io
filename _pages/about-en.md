@@ -43,7 +43,7 @@ redirect_from:
            width="64" height="64" alt="Hefei University of Technology emblem" loading="lazy" decoding="async">
       <div class="education-list__content">
         <time>Sep. 2020 — Jun. 2024</time>
-        <h3>Hefei University of Technology · School of Microelectronics</h3>
+        <h3>Hefei University of Technology · National Exemplary School of Microelectronics</h3>
         <p>B.Eng. in Integrated Circuit Design and Integrated Systems · Hefei, China</p>
       </div>
     </article>

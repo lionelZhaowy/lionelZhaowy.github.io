@@ -43,7 +43,7 @@ redirect_from:
            width="64" height="64" alt="合肥工业大学校徽" loading="lazy" decoding="async">
       <div class="education-list__content">
         <time>2020.09 — 2024.06</time>
-        <h3>合肥工业大学 · 微电子学院</h3>
+        <h3>合肥工业大学 · 国家示范性微电子学院</h3>
         <p>集成电路设计与集成系统，本科 · 合肥</p>
       </div>
     </article>
