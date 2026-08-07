@@ -44,6 +44,51 @@
    $type-size-6                : 1em;   // ~12px
    $type-size-7                : 0.6875em; // ~11px
    $type-size-8                : 0.625em;  // ~10px
+   /* rem-based type scale (Refresh theme, root = 16px)
+      ========================================================================== */
+   // Micro / badges
+   $fs-caption       : 0.58rem;   // .project-card__media-status
+   $fs-tag           : 0.62rem;   // .project-card__tags li, .publication-list__links a, .site-brand small
+   $fs-meta          : 0.65rem;   // .project-card__meta
+
+   // Eyebrow & labels
+   $fs-eyebrow       : 0.68rem;   // .section-eyebrow, .footer_copyright, .author__label
+   $fs-label         : 0.70rem;   // .education-list time, .author__links span
+   $fs-aux           : 0.75rem;   // .section-heading > span, .author__alt-name, .education-list p, .other-projects span
+
+   // Small text
+   $fs-sm            : 0.76rem;   // .project-card__summary, .site-nav__language, .author__focus li, .lazy-video-placeholder
+   $fs-stat-desc     : 0.78rem;   // .research-overview span
+   $fs-detail        : 0.80rem;   // .author__links strong, .publication-list li div p, .empty-note, .timeline-list li
+   $fs-bio           : 0.82rem;   // .author__bio
+   $fs-nav           : 0.84rem;   // .site-nav__links a, .other-projects strong
+   $fs-contact-hd    : 0.86rem;   // .author__links summary
+   $fs-subtitle      : 0.89rem;   // .education-list h3
+
+   // Card & content titles
+   $fs-card-title    : 0.94rem;   // .other-projects h3, .publication-list strong, .detail-page li
+   $fs-brand         : 0.95rem;   // .site-brand strong
+   $fs-content       : 0.96rem;   // .detail-page .page__content
+   $fs-card-h3       : 0.98rem;   // .project-card h3
+
+   // Body
+   $fs-base          : 1.00rem;   // body, .detail-page h3
+   $fs-lead          : 1.05rem;   // .home-hero p
+   $fs-accent        : 1.10rem;   // .publication-list__year, .home-hero__lead
+
+   // Headings
+   $fs-h3            : 1.25rem;   // .detail-page h2, .sidebar .author__name (mobile)
+   $fs-h2            : 1.45rem;   // .section-heading h2
+   $fs-author        : 1.55rem;   // .sidebar .author__name
+   $fs-h1            : 1.65rem;   // .detail-page h1
+
+   // Display
+   $fs-stat          : 2.10rem;   // .research-overview strong
+   $fs-hero          : clamp(2.2rem, 3vw, 2.8rem);     // .home-hero h1
+   $fs-hero-sm       : clamp(1.9rem, 7vw, 2.4rem);     // .home-hero h1 (mobile)
+
+   // Misc
+   $fs-img-caption   : 0.875rem;  // .image-caption
    
    
    /*
