@@ -287,7 +287,7 @@ video {
   border-radius: 5px;
   background: var(--soft-blue);
   color: var(--cas-blue);
-  font-size: 0.67rem;
+  font-size: 0.76rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -300,7 +300,7 @@ video {
 
 .author__links summary {
   color: var(--cas-blue);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 750;
   cursor: pointer;
 }
@@ -321,7 +321,7 @@ video {
 
 .author__links span {
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.70rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -330,7 +330,7 @@ video {
 .author__links strong {
   overflow-wrap: anywhere;
   color: #35465b;
-  font-size: 0.72rem;
+  font-size: 0.80rem;
   font-weight: 600;
 }
 
@@ -354,7 +354,7 @@ video {
   padding: 0;
   border: 0;
   color: var(--ink-strong);
-  font-size: clamp(2rem, 2.8vw, 2.65rem);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
   font-weight: 720;
   letter-spacing: -0.025em;
   line-height: 1.2;
@@ -370,13 +370,13 @@ video {
   max-width: 800px;
   margin: 0 0 11px;
   color: #4f5f73;
-  font-size: 0.96rem;
-  line-height: 1.85;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 .home-hero__intro p:last-child { margin-bottom: 0; }
 .home-hero__lead {
   color: #34465c !important;
-  font-size: 1rem !important;
+  font-size: 1.1rem !important;
 }
 
 .research-overview {
@@ -399,13 +399,13 @@ video {
 .research-overview > div + div { border-left: 1px solid var(--line); }
 .research-overview strong {
   color: var(--cas-blue);
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
 .research-overview span {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   line-height: 1.45;
 }
 
@@ -867,7 +867,7 @@ video {
 
 @media (max-width: 700px) {
   .site-brand small { display: none; }
-  .home-hero h1 { font-size: clamp(1.75rem, 7vw, 2.15rem); }
+  .home-hero h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); }
   .home-hero__intro { padding-left: 14px; }
   .research-overview { grid-template-columns: 1fr; padding: 0; }
   .research-overview > div { padding: 13px 0; }
