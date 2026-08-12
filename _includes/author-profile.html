@@ -51,17 +51,20 @@
     <summary>{% if is_en %}Contact & profiles{% else %}联系与主页{% endif %}</summary>
     <ul>
       {% if author_location %}
-        <li><span>{% if is_en %}Location{% else %}地点{% endif %}</span><strong itemprop="homeLocation">{{ author_location }}</strong></li>
+        <li><span class="author__link-row"><span class="author__link-icon">{% include contact-icon.html name='location' %}</span><span class="screen-reader-text">{% if is_en %}Location:{% else %}地点：{% endif %}</span><strong itemprop="homeLocation">{{ author_location }}</strong></span></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><span>Email</span><strong>{{ author.email }}</strong></a></li>
+        <li><a href="mailto:{{ author.email }}"><span class="author__link-icon">{% include contact-icon.html name='email' %}</span><span class="screen-reader-text">Email:</span><strong>{{ author.email }}</strong></a></li>
       {% endif %}
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}" itemprop="sameAs" rel="nofollow noopener noreferrer"><span>GitHub</span><strong>{{ author.github }}</strong></a></li>
+        <li><a href="https://github.com/{{ author.github }}" itemprop="sameAs" rel="nofollow noopener noreferrer"><span class="author__link-icon">{% include contact-icon.html name='github' %}</span><span class="screen-reader-text">GitHub:</span><strong>{{ author.github }}</strong></a></li>
       {% endif %}
+      {% comment %}
+      Google Scholar 条目已完成图标化，账号同步后删除本段 Liquid 注释标记即可启用。
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" itemprop="sameAs" rel="nofollow noopener noreferrer"><span>Google Scholar</span><strong>{% if is_en %}Publications & citations{% else %}论文与引用{% endif %}</strong></a></li>
+        <li><a href="{{ author.googlescholar }}" itemprop="sameAs" rel="nofollow noopener noreferrer"><span class="author__link-icon">{% include contact-icon.html name='scholar' %}</span><span class="screen-reader-text">Google Scholar:</span><strong>{% if is_en %}Publications & citations{% else %}论文与引用{% endif %}</strong></a></li>
       {% endif %}
+      {% endcomment %}
     </ul>
   </details>
 </div>
