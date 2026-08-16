@@ -1,0 +1,44 @@
+{% assign is_english_project = false %}
+{% if page.collection == 'projects_en' %}
+  {% assign is_english_project = true %}
+  {% assign project_items = site.projects_en | sort: 'order' %}
+  {% assign project_home = '/en/#projects' %}
+{% else %}
+  {% assign project_items = site.projects | sort: 'order' %}
+  {% assign project_home = '/#projects' %}
+{% endif %}
+
+{% assign next_project = nil %}
+{% assign current_project_found = false %}
+{% for project_item in project_items %}
+  {% if current_project_found %}
+    {% assign next_project = project_item %}
+    {% break %}
+  {% endif %}
+  {% if project_item.url == page.url %}
+    {% assign current_project_found = true %}
+  {% endif %}
+{% endfor %}
+{% unless next_project %}
+  {% assign next_project = project_items | first %}
+{% endunless %}
+
+<nav class="project-footer-nav" aria-label="{% if is_english_project %}Project navigation{% else %}项目导航{% endif %}">
+  <a class="project-footer-nav__link project-footer-nav__home" href="{{ project_home | relative_url }}">
+    <span class="project-footer-nav__arrow" aria-hidden="true">←</span>
+    <span>
+      <small>{% if is_english_project %}Back to home{% else %}返回首页{% endif %}</small>
+      <strong>{% if is_english_project %}View all projects{% else %}查看全部项目{% endif %}</strong>
+    </span>
+  </a>
+
+  {% if next_project and next_project.url != page.url %}
+    <a class="project-footer-nav__link project-footer-nav__next" href="{{ next_project.url | relative_url }}">
+      <span>
+        <small>{% if is_english_project %}Next project{% else %}下一个项目{% endif %}</small>
+        <strong>{{ next_project.title }}</strong>
+      </span>
+      <span class="project-footer-nav__arrow" aria-hidden="true">→</span>
+    </a>
+  {% endif %}
+</nav>

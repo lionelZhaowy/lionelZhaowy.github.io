@@ -378,9 +378,9 @@ video {
   border: 0;
   color: var(--ink-strong);
   font-size: $fs-hero;
-  font-weight: 720;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  font-weight: 680;
+  letter-spacing: -0.018em;
+  line-height: 1.24;
 }
 
 .home-hero h1 span { color: var(--cas-blue); }
@@ -819,6 +819,65 @@ video {
 .optimized-media { display: inline; }
 .optimized-media img { height: auto !important; }
 
+/* Project-to-project navigation */
+.project-footer-nav {
+  display: grid;
+  margin-top: 46px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 12px;
+}
+
+.project-footer-nav__link {
+  display: grid;
+  min-width: 0;
+  min-height: 78px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.project-footer-nav__home { grid-template-columns: auto minmax(0, 1fr); }
+.project-footer-nav__next {
+  grid-template-columns: minmax(0, 1fr) auto;
+  text-align: right;
+}
+.project-footer-nav__link small,
+.project-footer-nav__link strong { display: block; }
+.project-footer-nav__link small {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: $fs-label;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+.project-footer-nav__link strong {
+  overflow-wrap: anywhere;
+  color: var(--ink-strong);
+  font-size: $fs-nav;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.project-footer-nav__arrow {
+  color: var(--cas-blue);
+  font-size: $fs-accent;
+  font-weight: 750;
+}
+.project-footer-nav__link:hover,
+.project-footer-nav__link:focus-visible {
+  border-color: #a9c4df;
+  background: var(--soft-blue);
+  transform: translateY(-1px);
+}
+.project-footer-nav__link:hover strong,
+.project-footer-nav__link:focus-visible strong { color: var(--cas-blue); }
+
 .tech-accordion {
   border-color: var(--line);
   box-shadow: none;
@@ -902,6 +961,8 @@ video {
   .publication-list > li { grid-template-columns: 52px minmax(0, 1fr); }
   .publication-list__links { grid-column: 2; }
   .page__content div[style*="display: flex"] { flex-wrap: wrap; }
+  .project-footer-nav { grid-template-columns: 1fr; }
+  .project-footer-nav__next { text-align: left; }
 }
 
 @media (max-width: 480px) {
