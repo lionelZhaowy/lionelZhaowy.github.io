@@ -61,7 +61,7 @@
    $fs-stat-desc     : 0.78rem;   // .research-overview span
    $fs-detail        : 0.80rem;   // .author__links strong, .publication-list li div p, .empty-note, .timeline-list li
    $fs-bio           : 0.82rem;   // .author__bio
-   $fs-nav           : 0.90rem;   // .site-nav__links a, .other-projects strong
+   $fs-nav           : 0.99rem;   // .site-nav__links a, .other-projects strong
    $fs-contact-hd    : 0.86rem;   // .author__links summary
    $fs-subtitle      : 0.89rem;   // .education-list h3
 
@@ -84,7 +84,7 @@
 
    // Display
    $fs-stat          : 2.10rem;   // .research-overview strong
-   $fs-hero          : clamp(1.9rem, 2.55vw, 2.35rem); // .home-hero h1
+   $fs-hero          : clamp(1.9rem, 2.55vw, 2.1rem); // .home-hero h1
    $fs-hero-sm       : clamp(1.7rem, 6.2vw, 2rem);     // .home-hero h1 (mobile)
 
    // Misc
