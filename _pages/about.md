@@ -50,6 +50,35 @@ redirect_from:
   </div>
 </section>
 
+<section class="home-section" id="skills">
+  <header class="section-heading">
+    <div><p>SKILLS &amp; TOOLKIT</p><h2>技能与工具</h2></div>
+    <span>贯穿模型、编译器与处理器的工程能力</span>
+  </header>
+  <div class="skills-grid">
+    <article class="skill-group">
+      <p class="skill-group__index">01</p>
+      <h3>AI 模型与算法</h3>
+      <p>CNN / Transformer、目标检测与跟踪、知识蒸馏、剪枝、QAT / PTQ 量化</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">02</p>
+      <h3>编译与模型部署</h3>
+      <p>ONNX 解析、计算图优化、算子融合、内存分配、指令映射与代码生成</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">03</p>
+      <h3>处理器与数字系统</h3>
+      <p>RISC-V、SIMD、脉动阵列、FPGA 原型验证、RTL 仿真与板级测试</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">04</p>
+      <h3>工程开发工具链</h3>
+      <p>Python / PyTorch、MATLAB、C / C++、Vivado / VCS、Git 与 Linux</p>
+    </article>
+  </div>
+</section>
+
 <section class="home-section" id="projects">
   <header class="section-heading">
     <div><p>SELECTED PROJECTS</p><h2>代表项目</h2></div>

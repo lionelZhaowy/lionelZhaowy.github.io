@@ -6,6 +6,9 @@ main:
   - title: "Education"
     url: "/en/#education"
 
+  - title: "Skills"
+    url: "/en/#skills"
+
   - title: "Projects"
     url: "/en/#projects"
 

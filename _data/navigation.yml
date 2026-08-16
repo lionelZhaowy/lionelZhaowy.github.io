@@ -6,6 +6,9 @@ main:
   - title: "教育背景"
     url: "/#education"
 
+  - title: "技能工具"
+    url: "/#skills"
+
   - title: "项目经历"
     url: "/#projects"
 

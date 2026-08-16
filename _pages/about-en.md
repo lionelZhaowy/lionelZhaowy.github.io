@@ -50,6 +50,35 @@ redirect_from:
   </div>
 </section>
 
+<section class="home-section" id="skills">
+  <header class="section-heading">
+    <div><p>SKILLS &amp; TOOLKIT</p><h2>Skills &amp; Toolkit</h2></div>
+    <span>Engineering capabilities spanning models, compilers, and processors</span>
+  </header>
+  <div class="skills-grid">
+    <article class="skill-group">
+      <p class="skill-group__index">01</p>
+      <h3>AI Models &amp; Algorithms</h3>
+      <p>CNNs and Transformers, object detection and tracking, knowledge distillation, pruning, and QAT / PTQ quantization</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">02</p>
+      <h3>Compilation &amp; Deployment</h3>
+      <p>ONNX parsing, graph optimization, operator fusion, memory allocation, instruction mapping, and code generation</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">03</p>
+      <h3>Processors &amp; Digital Systems</h3>
+      <p>RISC-V, SIMD, systolic arrays, FPGA prototyping, RTL simulation, and board-level validation</p>
+    </article>
+    <article class="skill-group">
+      <p class="skill-group__index">04</p>
+      <h3>Engineering Toolchain</h3>
+      <p>Python / PyTorch, MATLAB, C / C++, Vivado / VCS, Git, and Linux</p>
+    </article>
+  </div>
+</section>
+
 <section class="home-section" id="projects">
   <header class="section-heading">
     <div><p>SELECTED PROJECTS</p><h2>Selected Projects</h2></div>

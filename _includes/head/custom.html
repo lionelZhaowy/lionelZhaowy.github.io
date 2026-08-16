@@ -4,7 +4,18 @@
 <link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}">
 
 <meta name="msapplication-TileColor" content="#003E8C">
-<meta name="theme-color" content="#ffffff">
+<meta id="theme-color" name="theme-color" content="#ffffff">
+<script>
+  (function () {
+    var theme = "light";
+    try {
+      if (window.localStorage.getItem("site-theme") === "dark") theme = "dark";
+    } catch (error) {}
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    document.getElementById("theme-color").setAttribute("content", theme === "dark" ? "#0b111b" : "#ffffff");
+  })();
+</script>
 {% if page.math %}
   <script>
     window.MathJax = {

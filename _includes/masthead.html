@@ -37,6 +37,11 @@
           <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
+      <button class="site-nav__theme" type="button" aria-pressed="false">
+        <span class="theme-toggle__moon" aria-hidden="true">☾</span>
+        <span class="theme-toggle__sun" aria-hidden="true">☀</span>
+        <span class="visually-hidden theme-toggle__label">{% if is_en %}Switch to dark theme{% else %}切换到深色主题{% endif %}</span>
+      </button>
       <a class="site-nav__language" href="{{ language_url | relative_url }}" hreflang="{% if is_en %}zh-CN{% else %}en{% endif %}">
         {% if is_en %}中文{% else %}EN{% endif %}
       </a>

@@ -1,0 +1,17 @@
+{% assign is_english_project = false %}
+{% if page.collection == 'projects_en' %}
+  {% assign is_english_project = true %}
+  {% assign home_url = '/en/' %}
+  {% assign projects_url = '/en/#projects' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign projects_url = '/#projects' %}
+{% endif %}
+
+<nav class="project-breadcrumbs" aria-label="{% if is_english_project %}Breadcrumb{% else %}面包屑导航{% endif %}">
+  <ol>
+    <li><a href="{{ home_url | relative_url }}">{% if is_english_project %}Home{% else %}首页{% endif %}</a></li>
+    <li><a href="{{ projects_url | relative_url }}">{% if is_english_project %}Projects{% else %}项目经历{% endif %}</a></li>
+    <li aria-current="page"><span>{{ page.title }}</span></li>
+  </ol>
+</nav>
