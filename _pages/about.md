@@ -35,7 +35,7 @@ redirect_from:
       <div class="education-list__content">
         <time>2024.09 — 至今</time>
         <h3>中国科学院大学 · 中国科学院半导体研究所</h3>
-        <p>集成电路科学与工程，硕博连读 · 北京</p>
+        <p>集成电路科学与工程，硕博连读 (预计2029年毕业) · 北京</p>
       </div>
     </article>
     <article>

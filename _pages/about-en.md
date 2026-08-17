@@ -35,7 +35,7 @@ redirect_from:
       <div class="education-list__content">
         <time>Sep. 2024 — Present</time>
         <h3>University of Chinese Academy of Sciences · Institute of Semiconductors, CAS</h3>
-        <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program · Beijing, China</p>
+        <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program (expected graduation: 2029) · Beijing, China</p>
       </div>
     </article>
     <article>
