@@ -14,7 +14,7 @@ redirect_from:
   <h1>你好，我是 <span>赵文尧</span>。</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，攻读集成电路科学与工程硕博连读项目，导师为刘力源研究员；本科毕业于合肥工业大学微电子学院。</p>
-    <p>我的工作围绕边缘端智能计算展开，涵盖神经网络模型优化、定制处理器编译映射与芯片部署验证，重点关注 AI 算法、编译器和处理器架构之间的跨层协同。目前，我已参与 3 款课题组自研 ASIC 处理器的算法设计与编译部署，并完成 2 款 FPGA AI 加速器的设计与验证。</p>
+    <p>我聚焦自研 AI 处理器的架构与软件栈：参与定制数据通路、指令扩展和数字系统验证，并研发从模型解析、硬件感知量化到内存规划、指令映射与代码生成的编译部署工具链，推动 AI 模型在 ASIC 与 FPGA 原型上的正确、高效执行。</p>
   </div>
 
   <div class="research-overview" aria-label="研究与工程概览">
@@ -53,30 +53,31 @@ redirect_from:
 <section class="home-section" id="skills">
   <header class="section-heading">
     <div><p>SKILLS &amp; TOOLKIT</p><h2>技能与工具</h2></div>
-    <span>贯穿模型、编译器与处理器的工程能力</span>
+    <span>面向自研 AI 处理器的架构、编译与验证能力</span>
   </header>
   <div class="skills-grid">
     <article class="skill-group">
       <p class="skill-group__index">01</p>
-      <h3>AI 模型与算法</h3>
-      <p>CNN / Transformer、目标检测与跟踪、知识蒸馏、剪枝、QAT / PTQ 量化</p>
+      <h3>AI 处理器与数字系统</h3>
+      <p>RISC-V 自定义指令扩展、SIMD 与脉动阵列、计算数据流、定点数据通路、加速器集成与 RTL 设计</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">02</p>
-      <h3>编译与模型部署</h3>
-      <p>ONNX 解析、计算图优化、算子融合、内存分配、指令映射与代码生成</p>
+      <h3>定制处理器编译与部署</h3>
+      <p>ONNX 计算图解析、硬件建模、算子融合、静态内存规划、张量排布转换、指令映射与代码生成</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">03</p>
-      <h3>处理器与数字系统</h3>
-      <p>RISC-V、SIMD、脉动阵列、FPGA 原型验证、RTL 仿真与板级测试</p>
+      <h3>硬件感知模型优化</h3>
+      <p>CNN / Transformer 模型适配、QAT / PTQ、定点数值建模、算子约束、剪枝与知识蒸馏</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">04</p>
-      <h3>工程开发工具链</h3>
-      <p>Python / PyTorch、MATLAB、C / C++、Vivado / VCS、Git 与 Linux</p>
+      <h3>验证与性能优化</h3>
+      <p>MATLAB 参考模型、VCS RTL 仿真、FPGA 原型与板级测试、数值一致性验证、周期与访存瓶颈分析</p>
     </article>
   </div>
+  <p class="skills-toolbox"><strong>常用开发环境</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · Vivado / VCS · Git / Linux</span></p>
 </section>
 
 <section class="home-section" id="projects">

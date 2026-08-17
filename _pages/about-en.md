@@ -14,7 +14,7 @@ redirect_from:
   <h1>Hello, I’m <span>Wenyao Zhao</span>.</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">I am a graduate student in the integrated M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
-    <p>My work focuses on edge AI computing, spanning neural-network optimization, compiler mapping, and on-chip deployment for custom processors. I am particularly interested in cross-layer co-design among AI models, compilers, and processor architectures. To date, I have contributed to algorithm development and compiler deployment for three in-house ASIC processors and completed the design and verification of two FPGA-based AI accelerators.</p>
+    <p>My work focuses on the architecture and software stack of custom AI processors. I contribute to custom datapaths, ISA extensions, and digital-system verification while building compilation and deployment infrastructure that spans model parsing, hardware-aware quantization, memory planning, instruction mapping, and code generation. This work enables correct and efficient execution of AI workloads on in-house ASICs and FPGA prototypes.</p>
   </div>
 
   <div class="research-overview" aria-label="Research and engineering overview">
@@ -53,30 +53,31 @@ redirect_from:
 <section class="home-section" id="skills">
   <header class="section-heading">
     <div><p>SKILLS &amp; TOOLKIT</p><h2>Skills &amp; Toolkit</h2></div>
-    <span>Engineering capabilities spanning models, compilers, and processors</span>
+    <span>Architecture, compiler, and verification capabilities for custom AI processors</span>
   </header>
   <div class="skills-grid">
     <article class="skill-group">
       <p class="skill-group__index">01</p>
-      <h3>AI Models &amp; Algorithms</h3>
-      <p>CNNs and Transformers, object detection and tracking, knowledge distillation, pruning, and QAT / PTQ quantization</p>
+      <h3>AI Processors &amp; Digital Systems</h3>
+      <p>RISC-V custom ISA extensions, SIMD and systolic arrays, compute dataflows, fixed-point datapaths, accelerator integration, and RTL design</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">02</p>
-      <h3>Compilation &amp; Deployment</h3>
-      <p>ONNX parsing, graph optimization, operator fusion, memory allocation, instruction mapping, and code generation</p>
+      <h3>Compilation &amp; Deployment for Custom Processors</h3>
+      <p>ONNX graph parsing, hardware modeling, operator fusion, static memory planning, tensor-layout transformation, instruction mapping, and code generation</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">03</p>
-      <h3>Processors &amp; Digital Systems</h3>
-      <p>RISC-V, SIMD, systolic arrays, FPGA prototyping, RTL simulation, and board-level validation</p>
+      <h3>Hardware-Aware Model Optimization</h3>
+      <p>CNN / Transformer adaptation, QAT / PTQ, fixed-point numerical modeling, operator constraints, pruning, and knowledge distillation</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">04</p>
-      <h3>Engineering Toolchain</h3>
-      <p>Python / PyTorch, MATLAB, C / C++, Vivado / VCS, Git, and Linux</p>
+      <h3>Verification &amp; Performance Analysis</h3>
+      <p>MATLAB reference models, VCS RTL simulation, FPGA prototyping and board-level testing, numerical consistency checks, and cycle / memory-bottleneck analysis</p>
     </article>
   </div>
+  <p class="skills-toolbox"><strong>Development environment</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · Vivado / VCS · Git / Linux</span></p>
 </section>
 
 <section class="home-section" id="projects">

@@ -636,6 +636,25 @@ html[data-theme="dark"] .theme-toggle__sun { display: block; }
   font-size: $fs-sm;
   line-height: 1.65;
 }
+.skills-toolbox {
+  display: flex;
+  margin: 14px 0 0;
+  padding: 13px 16px;
+  align-items: baseline;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--soft-blue);
+  color: var(--body-copy-soft);
+  font-size: $fs-sm;
+  line-height: 1.6;
+}
+.skills-toolbox strong {
+  flex: 0 0 auto;
+  color: var(--cas-blue);
+  font-size: $fs-aux;
+  letter-spacing: 0.04em;
+}
 
 .project-grid {
   display: grid;
@@ -1186,6 +1205,7 @@ html[data-theme="dark"] .notice--danger {
   .education-list,
   .skills-grid,
   .project-grid { grid-template-columns: 1fr; }
+  .skills-toolbox { align-items: flex-start; flex-direction: column; gap: 3px; }
   .section-heading { align-items: start; flex-direction: column; gap: 4px; }
   .section-heading > span { text-align: left; }
   .publication-list > li { grid-template-columns: 52px minmax(0, 1fr); }
