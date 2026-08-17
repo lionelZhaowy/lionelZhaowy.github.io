@@ -14,7 +14,7 @@ redirect_from:
   <h1>你好，我是 <span>赵文尧</span>。</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">我目前就读于中国科学院半导体研究所，攻读集成电路科学与工程硕博连读项目，导师为刘力源研究员；本科毕业于合肥工业大学微电子学院。</p>
-    <p>我聚焦自研 AI 处理器的架构与软件栈：参与定制数据通路、指令扩展和数字系统验证，并研发从模型解析、硬件感知量化到内存规划、指令映射与代码生成的编译部署工具链，推动 AI 模型在 ASIC 与 FPGA 原型上的正确、高效执行。</p>
+    <p>我的工作聚焦于自研 AI 处理器的架构与软件栈：参与定制指令扩展、数据通路和数字系统验证，并研发从模型解析、硬件感知量化到内存规划、指令映射与代码生成的编译部署工具链，推动 AI 模型在 ASIC 与 FPGA 原型上的正确、高效执行。</p>
   </div>
 
   <div class="research-overview" aria-label="研究与工程概览">
@@ -77,7 +77,7 @@ redirect_from:
       <p>MATLAB 参考模型、VCS RTL 仿真、FPGA 原型与板级测试、数值一致性验证、周期与访存瓶颈分析</p>
     </article>
   </div>
-  <p class="skills-toolbox"><strong>常用开发环境</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · Vivado / VCS · Git / Linux</span></p>
+  <p class="skills-toolbox"><strong>常用开发工具</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · VCS / ModelSim · Vivado · Git / Linux</span></p>
 </section>
 
 <section class="home-section" id="projects">
