@@ -992,37 +992,41 @@ html[data-theme="dark"] .theme-toggle__sun { display: block; }
 .optimized-media img { height: auto !important; }
 
 /* Project-to-project navigation */
+.detail-page .page__inner-wrap { display: flow-root; }
+
 .project-footer-nav {
-  display: flex;
+  clear: both;
+  display: grid;
+  width: 100%;
   margin-top: 46px;
   padding-top: 22px;
   border-top: 1px solid var(--line);
-  align-items: stretch;
-  justify-content: space-between;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
   gap: clamp(32px, 8vw, 104px);
 }
 
 .project-footer-nav__link {
   display: grid;
   min-width: 0;
-  min-height: 78px;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  background: var(--surface);
+  max-width: 460px;
+  min-height: 52px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
   align-items: center;
   gap: 13px;
   text-decoration: none;
-  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+  transition: color 160ms ease;
 }
 
 .project-footer-nav__home {
-  flex: 0 1 290px;
+  justify-self: start;
   grid-template-columns: auto minmax(0, 1fr);
 }
 .project-footer-nav__next {
-  flex: 0 1 430px;
-  margin-left: auto;
+  justify-self: end;
   grid-template-columns: minmax(0, 1fr) auto;
   text-align: right;
 }
@@ -1049,9 +1053,7 @@ html[data-theme="dark"] .theme-toggle__sun { display: block; }
 }
 .project-footer-nav__link:hover,
 .project-footer-nav__link:focus-visible {
-  border-color: var(--line-strong);
-  background: var(--soft-blue);
-  transform: translateY(-1px);
+  background: transparent;
 }
 .project-footer-nav__link:hover strong,
 .project-footer-nav__link:focus-visible strong { color: var(--cas-blue); }
@@ -1189,10 +1191,10 @@ html[data-theme="dark"] .notice--danger {
   .publication-list > li { grid-template-columns: 52px minmax(0, 1fr); }
   .publication-list__links { grid-column: 2; }
   .page__content div[style*="display: flex"] { flex-wrap: wrap; }
-  .project-footer-nav { flex-direction: column; gap: 12px; }
+  .project-footer-nav { grid-template-columns: 1fr; gap: 12px; }
   .project-footer-nav__home,
-  .project-footer-nav__next { width: 100%; flex-basis: auto; }
-  .project-footer-nav__next { margin-left: 0; text-align: left; }
+  .project-footer-nav__next { width: 100%; max-width: none; justify-self: stretch; }
+  .project-footer-nav__next { text-align: left; }
 }
 
 @media (max-width: 480px) {

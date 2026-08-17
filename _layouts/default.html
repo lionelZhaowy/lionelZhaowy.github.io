@@ -28,10 +28,10 @@ layout: compress
           <section class="page__content" itemprop="text">
             {{ content }}
           </section>
-          {% if page.collection == 'projects' or page.collection == 'projects_en' %}
-            {% include project-navigation.html %}
-          {% endif %}
         </div>
+        {% if page.collection == 'projects' or page.collection == 'projects_en' %}
+          {% include project-navigation.html %}
+        {% endif %}
       </article>
     </div>
 
