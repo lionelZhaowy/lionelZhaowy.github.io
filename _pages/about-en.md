@@ -33,9 +33,9 @@ redirect_from:
       <img class="education-list__logo" src="{{ '/images/CAS_logo.svg' | relative_url }}"
            width="64" height="64" alt="Chinese Academy of Sciences emblem" loading="lazy" decoding="async">
       <div class="education-list__content">
-        <time>Sep. 2024 — Present</time>
+        <time>Sep. 2024 — Present(expected graduation: 2029)</time>
         <h3>University of Chinese Academy of Sciences · Institute of Semiconductors, CAS</h3>
-        <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program (expected graduation: 2029) · Beijing, China</p>
+        <p>Integrated Circuit Science and Engineering, combined M.S.–Ph.D. program(recommendation for graduate study without examination) · Beijing, China</p>
       </div>
     </article>
     <article>
@@ -64,12 +64,12 @@ redirect_from:
     <article class="skill-group">
       <p class="skill-group__index">02</p>
       <h3>Compilation &amp; Deployment for Custom Processors</h3>
-      <p>ONNX graph parsing, hardware modeling, operator fusion, static memory planning, tensor-layout transformation, instruction mapping, and code generation</p>
+      <p>ONNX graph parsing, operator fusion, static memory planning, tensor-layout transformation, instruction mapping, and code generation</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">03</p>
       <h3>Hardware-Aware Model Optimization</h3>
-      <p>CNN / Transformer adaptation, QAT / PTQ, fixed-point numerical modeling, operator constraints, pruning, and knowledge distillation</p>
+      <p>CNN / Transformer adaptation, fixed-point numerical modeling, operator constraints, pruning, QAT / PTQ, and knowledge distillation</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">04</p>
@@ -77,7 +77,7 @@ redirect_from:
       <p>MATLAB reference models, VCS RTL simulation, FPGA prototyping and board-level testing, numerical consistency checks, and cycle / memory-bottleneck analysis</p>
     </article>
   </div>
-  <p class="skills-toolbox"><strong>Development environment</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · Vivado / VCS · Git / Linux</span></p>
+  <p class="skills-toolbox"><strong>Development environment</strong><span>Verilog / SystemVerilog · VCS / ModelSim · DC · ICC · Vivado · Python / PyTorch · MATLAB · C / C++ · Git / Linux</span></p>
 </section>
 
 <section class="home-section" id="projects">

@@ -33,9 +33,9 @@ redirect_from:
       <img class="education-list__logo" src="{{ '/images/CAS_logo.svg' | relative_url }}"
            width="64" height="64" alt="中国科学院院徽" loading="lazy" decoding="async">
       <div class="education-list__content">
-        <time>2024.09 — 至今</time>
+        <time>2024.09 — 至今(预计2029年毕业)</time>
         <h3>中国科学院大学 · 中国科学院半导体研究所</h3>
-        <p>集成电路科学与工程，硕博连读 (预计2029年毕业) · 北京</p>
+        <p>集成电路科学与工程，硕博连读(保研) · 北京</p>
       </div>
     </article>
     <article>
@@ -64,12 +64,12 @@ redirect_from:
     <article class="skill-group">
       <p class="skill-group__index">02</p>
       <h3>定制处理器编译与部署</h3>
-      <p>ONNX 计算图解析、硬件建模、算子融合、静态内存规划、张量排布转换、指令映射与代码生成</p>
+      <p>ONNX 计算图解析、算子融合、静态内存规划、张量排布转换、芯间通信传输、指令映射与代码生成</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">03</p>
       <h3>硬件感知模型优化</h3>
-      <p>CNN / Transformer 模型适配、QAT / PTQ、定点数值建模、算子约束、剪枝与知识蒸馏</p>
+      <p>CNN / Transformer 模型适配、定点数值建模、算子约束、QAT / PTQ、剪枝与知识蒸馏</p>
     </article>
     <article class="skill-group">
       <p class="skill-group__index">04</p>
@@ -77,7 +77,7 @@ redirect_from:
       <p>MATLAB 参考模型、VCS RTL 仿真、FPGA 原型与板级测试、数值一致性验证、周期与访存瓶颈分析</p>
     </article>
   </div>
-  <p class="skills-toolbox"><strong>常用开发工具</strong><span>Python / PyTorch · MATLAB · C / C++ · Verilog / SystemVerilog · VCS / ModelSim · Vivado · Git / Linux</span></p>
+  <p class="skills-toolbox"><strong>常用开发工具</strong><span>Verilog / SystemVerilog · VCS / ModelSim · DC · ICC · Vivado · Python / PyTorch · MATLAB · C / C++ · Git / Linux</span></p>
 </section>
 
 <section class="home-section" id="projects">
