@@ -14,7 +14,7 @@ redirect_from:
   <h1>Hello, I’m <span>Wenyao Zhao</span>.</h1>
   <div class="home-hero__intro">
     <p class="home-hero__lead">I am a graduate student in the integrated M.S.–Ph.D. program in Integrated Circuit Science and Engineering at the Institute of Semiconductors, Chinese Academy of Sciences, advised by Prof. Liyuan Liu. I received my B.Eng. from the School of Microelectronics at Hefei University of Technology.</p>
-    <p>My work focuses on the architecture and software stack of custom AI processors. I contribute to custom datapaths, ISA extensions, and digital-system verification while building compilation and deployment infrastructure that spans model parsing, hardware-aware quantization, memory planning, instruction mapping, and code generation. This work enables correct and efficient execution of AI workloads on in-house ASICs and FPGA prototypes.</p>
+    <p class="home-hero__lead">My work focuses on the architecture and software stack of custom AI processors. I contribute to custom datapaths, ISA extensions, and digital-system verification while building compilation and deployment infrastructure that spans model parsing, hardware-aware quantization, memory planning, instruction mapping, and code generation. This work enables correct and efficient execution of AI workloads on in-house ASICs and FPGA prototypes.</p>
   </div>
 
   <div class="research-overview" aria-label="Research and engineering overview">
