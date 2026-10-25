@@ -5,10 +5,18 @@
 {% endif %}
 
 {% if is_video %}
-  <video class="project-card__media lazy-video" muted loop playsinline preload="none"
-         aria-label="{{ project.title | escape }}">
-    <source data-src="{{ project.teaser | relative_url }}" type="{% if project.teaser contains '.webm' %}video/webm{% else %}video/mp4{% endif %}">
-  </video>
+  <span class="lazy-video-frame{% if project.teaser_poster %} has-poster{% endif %}">
+    <video class="project-card__media lazy-video" muted loop playsinline preload="none"
+           width="640" height="360"
+           aria-label="{{ project.title | escape }}">
+      <source data-src="{{ project.teaser | relative_url }}" type="{% if project.teaser contains '.webm' %}video/webm{% else %}video/mp4{% endif %}">
+    </video>
+    {% if project.teaser_poster %}
+      <img class="lazy-video-poster" src="{{ project.teaser_poster | relative_url }}"
+           width="640" height="360" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low">
+    {% endif %}
+    <span class="lazy-video-placeholder" role="status" aria-live="polite"></span>
+  </span>
   <span class="project-card__media-status" aria-hidden="true">Video</span>
 {% elsif project.teaser %}
   <picture>
