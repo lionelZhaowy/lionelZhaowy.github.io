@@ -26,7 +26,29 @@
       options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
     };
   </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    (function () {
+      function loadMathJax() {
+        if (window.__mathJaxLoading) return;
+        window.__mathJaxLoading = true;
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+        script.async = true;
+        document.head.appendChild(script);
+      }
+
+      function scheduleMathJax() {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadMathJax, { timeout: 2500 });
+        } else {
+          window.setTimeout(loadMathJax, 2500);
+        }
+      }
+
+      if (document.readyState === 'complete') scheduleMathJax();
+      else window.addEventListener('load', scheduleMathJax, { once: true });
+    })();
+  </script>
 {% endif %}
 
 <!-- end custom head snippets -->

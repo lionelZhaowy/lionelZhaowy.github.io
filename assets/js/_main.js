@@ -114,6 +114,7 @@
         placeholder.setAttribute("aria-live", "polite");
         frame.appendChild(placeholder);
       }
+      if (video.getAttribute("poster")) frame.classList.add("has-poster");
       return { frame: frame, placeholder: placeholder };
     }
 
@@ -176,6 +177,21 @@
         record.expectedPause = true;
         record.video.pause();
       }
+    }
+
+    function releaseVideo(record) {
+      if (!record.started || record.visible || record.state === "error") return;
+      if (record.release) record.release();
+      pauseVideo(record);
+      Array.prototype.forEach.call(record.video.querySelectorAll("source[data-src]"), function (source) {
+        source.removeAttribute("src");
+      });
+      record.video.preload = "none";
+      record.started = false;
+      record.pendingPlay = false;
+      record.video.load();
+      record.frame.classList.remove("is-ready", "is-loading");
+      setState(record, "idle");
     }
 
     function playVideo(record, explicit) {
@@ -388,6 +404,9 @@
         record.near = area > 0 && record.video.getClientRects().length > 0 &&
           bounds.bottom >= -prepareDistance && bounds.top <= window.innerHeight + prepareDistance;
         updateVisibility(record, area ? visibleWidth * visibleHeight / area : 0);
+        var releaseDistance = Math.max(prepareDistance * 2, window.innerHeight);
+        var farFromViewport = bounds.bottom < -releaseDistance || bounds.top > window.innerHeight + releaseDistance;
+        if (farFromViewport) releaseVideo(record);
         if (record.near && (autoPlay || record.visible)) requestVideo(record);
       });
       scheduleDrain();
@@ -410,10 +429,28 @@
         });
         scheduleDrain();
       }, { threshold: [0, 0.08, 0.25] });
+      var releaseObserver;
+      function observeReleaseDistance() {
+        if (releaseObserver) releaseObserver.disconnect();
+        releaseObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var record = recordByVideo.get(entry.target);
+            if (!entry.isIntersecting) {
+              record.visible = false;
+              releaseVideo(record);
+            }
+          });
+        }, { rootMargin: Math.max(prepareDistance * 2, window.innerHeight) + "px 0px", threshold: 0 });
+        videos.forEach(function (video) {
+          releaseObserver.observe(video);
+        });
+      }
       videos.forEach(function (video) {
         prepareObserver.observe(video);
         playObserver.observe(video);
       });
+      observeReleaseDistance();
+      window.addEventListener("resize", observeReleaseDistance);
     } else {
       var geometryTimer = null;
       function scheduleGeometry() {

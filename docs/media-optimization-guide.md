@@ -28,8 +28,9 @@
 - 最多同时启动两项准备任务；未可见的视频一次只准备一段，已有可见视频等待首帧时暂停派发未可见任务。当前可见的视频优先，其次是距离视口最近的视频；过期排队任务会被移除。
 - 首帧可用或任务失败、超时后释放启动槽位。这是准备任务的准入限制，不是浏览器下载连接数的硬限制；暂停也不保证取消下载。
 - 页面切入后台时暂停视频并停止派发新准备任务，恢复前台或从往返缓存恢复时重新检查可见性，保留用户主动暂停。
+- 详情页视频同样按视口加载；视频离开视口超过释放距离后会暂停、移除真实 `src` 并调用 `load()` 释放媒体资源，返回准备区后使用保留的 `data-src` 重新加载。
 - 开启节省流量模式或 `prefers-reduced-motion` 时停止自动播放并显示控件。
-- 首页先显示本视频的 WebP 封面，首个视频画面呈现后淡出；详情视频无封面时保留加载占位。等待动画仅在实际加载时显示。
+- 首页和详情页视频优先显示独立的 WebP poster，首个视频画面呈现后淡出；没有 poster 的视频保留加载占位。等待动画仅在实际加载时显示。
 - 加载失败或自动播放被浏览器拦截时提供独立的重试/播放按钮，首页项目链接继续用于导航。网络恢复时最多自动重试一次失败且可见的视频。
 - 本科毕设跟踪结果在桌面端保持 4 列，1024px 以下为 2 列，600px 以下为 1 列。
 
@@ -230,7 +231,8 @@ teaser_poster: "/images/project/202601-202603-NewProject/Demo-poster.webp"
 
 ```html
 <video class="lazy-video" autoplay loop muted playsinline
-       webkit-playsinline width="90%" preload="none">
+       webkit-playsinline width="90%" preload="none"
+       poster="{{ '/images/project/202601-202603-NewProject/Demo-web-poster.webp' | relative_url }}">
   <source data-src="{{ '/images/project/202601-202603-NewProject/Demo-web.mp4' | relative_url }}"
           type="video/mp4">
 </video>
@@ -243,8 +245,8 @@ teaser_poster: "/images/project/202601-202603-NewProject/Demo-poster.webp"
 - 把地址写入 `data-src`，不要直接写 `src`。
 - 自动播放视频必须包含 `muted` 和 `playsinline`。
 - 不要添加破坏缓存的查询参数。
-- 详情页默认显示统一加载占位，不需要设置 `poster`；首页通过 `teaser_poster` 配置懒加载封面叠层，避免原生 `poster` 提前抢占首屏下载。
-- 如果确实需要 `poster`，必须是该视频独有且经过压缩的首帧，不能复用项目架构图或其他视频的静态图。
+- 详情页视频应配置与网页视频同名的独立 poster，例如 `Demo-web.mp4` 对应 `Demo-web-poster.webp`；poster 必须是压缩后的首帧，不能复用项目架构图或其他视频的静态图。
+- poster 只作为视觉占位，不把视频地址写入 `src`；真实视频地址仍放在 `source[data-src]` 中。
 
 ### 5.3 详情页图片
 
@@ -277,11 +279,13 @@ teaser_poster: "/images/project/202601-202603-NewProject/Demo-poster.webp"
 5. 检查压缩后图片中的小字、边框和曲线，检查视频中的检测框、跟踪框和波形是否清晰。
 6. 更新 `_projects/项目.md` 的中文内容和媒体引用。
 7. 以中文页为事实基线，同步更新 `_projects_en/项目.md`，不要改变技术指标、作者关系和贡献边界。
-8. 确认所有视频使用 `lazy-video + preload="none" + data-src`。
+8. 确认所有视频使用 `lazy-video + preload="none" + data-src`，详情视频同时配置独立 poster。
 9. 确认所有正文图片使用 WebP 优先、原图回退、懒加载和明确尺寸。
 10. 执行媒体解码、资源路径、JavaScript、Jekyll 构建和 Git 差异检查。
 11. 在 1440、1024、768 和 390px 宽度下人工检查布局与媒体比例。
 12. 人工审核通过后再提交、推送或发布。
+
+详情页包含公式的页面通过 `page.math: true` 启用 MathJax。MathJax 在页面完成初始加载后利用浏览器空闲时间动态加载，最长等待约 2.5 秒，以避免公式脚本与首屏媒体竞争；公式配置和渲染规则保持不变。
 
 ## 7. 验证命令
 
