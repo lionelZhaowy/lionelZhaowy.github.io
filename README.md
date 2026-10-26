@@ -64,6 +64,19 @@ AcadHomepage
 
 如需仅验证生产构建，可运行 `bundle _2.3.24_ exec jekyll build`，输出位于 `_site`。
 
+## 项目介绍维护
+
+新增项目或重构介绍前，阅读 [项目写作与维护规范](docs/project-maintenance-guide.md) 和 [媒体优化与接入指南](docs/media-optimization-guide.md)。使用 [中文模板](docs/templates/project-zh.md) 与 [英文模板](docs/templates/project-en.md)，同步维护同名项目页和共享媒体。
+
+安装 Node.js 18+ 后，在仓库根目录执行以下检查，无需安装 npm 依赖：
+
+```powershell
+node scripts/audit-projects.mjs
+node scripts/audit-projects.mjs --project 202604-202606-S28Compiler --strict
+```
+
+第一条检查全部项目；第二条示范对指定项目的中英文页面执行严格检查，警告也会导致失败。审计不会修改文件；现有历史警告需在对应页面重构时处理。随后执行 Jekyll 构建并人工验证布局、公式和媒体播放，完整流程及退出码见维护规范。
+
 # Acknowledges
 
 - AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.

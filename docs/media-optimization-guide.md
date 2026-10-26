@@ -2,6 +2,8 @@
 
 本文档记录本个人主页中视频、图片的压缩方案、页面接入方式和验收流程。后续添加新项目时，应先生成网页专用媒体，再更新中英文项目页，避免直接把相机原片、录屏原片或高分辨率技术图用于网页展示。
 
+项目内容结构、front matter、双语同步、新增与重构清单见 [项目写作与维护规范](project-maintenance-guide.md)，可复制的中英文模板位于 [templates/](templates/)。媒体接入后运行 `node scripts/audit-projects.mjs`，对本次新增或重构项目使用 `--project 完整文件名去掉.md --strict`。
+
 ## 1. 当前方案概览
 
 站点采用“保留原文件 + 新增网页版本”的方式管理媒体：
@@ -288,6 +290,18 @@ teaser_poster: "/images/project/202601-202603-NewProject/Demo-poster.webp"
 详情页包含公式的页面通过 `page.math: true` 启用 MathJax。MathJax 在页面完成初始加载后利用浏览器空闲时间动态加载，最长等待约 2.5 秒，以避免公式脚本与首屏媒体竞争；公式配置和渲染规则保持不变。
 
 ## 7. 验证命令
+
+### 7.0 项目规范审计
+
+```powershell
+node scripts/audit-projects.mjs
+node scripts/audit-projects.mjs --project 202604-202606-S28Compiler --strict
+node scripts/audit-projects.mjs --json
+```
+
+需要 Node.js 18+，无需 npm 依赖。脚本检查双语配对、关键字段、本地资源路径及大小写、视频懒加载/poster、图片尺寸与回退等约定，且不修改项目文件。默认有错误时退出 `1`，严格模式也会因警告退出 `1`；参数/输入错误退出 `2`。现有百分比尺寸与仅图号 alt 等历史问题保留为警告，重构目标项目时逐项修复。
+
+审计不能验证像素尺寸真实性、文件解码、加载/释放行为和双语技术含义，仍需执行下列媒体验证与构建，并人工查阅。完整规则与限制见 [项目维护规范](project-maintenance-guide.md#7-自动审计)。
 
 ### 7.1 检查是否仍引用原始 MP4
 

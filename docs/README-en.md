@@ -65,6 +65,19 @@ Some examples:
 1. If you change the source code of the website, the livereload server will automatically refresh.
 1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
 
+## Maintaining Project Pages
+
+Before adding or restructuring a project, read the [project maintenance guide (Chinese)](project-maintenance-guide.md) and [media optimization guide (Chinese)](media-optimization-guide.md). Start from the [Chinese template](templates/project-zh.md) and [English template](templates/project-en.md). Keep filenames, media, dates, metrics, and contribution boundaries aligned across both languages.
+
+With Node.js 18+ installed, run from the repository root; no npm dependencies are required:
+
+```powershell
+node scripts/audit-projects.mjs
+node scripts/audit-projects.mjs --project 202604-202606-S28Compiler --strict
+```
+
+The first command audits all projects. The second checks both language versions of the selected project and also fails on warnings. The audit is read-only; existing warnings remain visible until those pages are maintained. Follow it with a Jekyll build and manual checks for layout, formulas, and video playback. See the maintenance guide for limitations and the release checklist.
+
 # Acknowledges
 
 - AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
