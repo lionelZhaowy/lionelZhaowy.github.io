@@ -20,7 +20,7 @@ redirect_from:
   <div class="research-overview" aria-label="研究与工程概览">
     <div><strong>3</strong><span>款自研 ASIC<br>算法与部署实践</span></div>
     <div><strong>2</strong><span>款 FPGA<br>加速器设计验证</span></div>
-    <div><strong>2</strong><span>篇已发表论文<br>涵盖算法与加速器</span></div>
+    <div><strong>3</strong><span>篇已发表论文<br>涵盖算法与加速器</span></div>
   </div>
 </section>
 
@@ -120,6 +120,11 @@ redirect_from:
     <div><p>PUBLICATIONS</p><h2>论文成果</h2></div>
   </header>
   <ol class="publication-list">
+    <li>
+      <span class="publication-list__year">2026</span>
+      <div><strong>A Heterogeneous Hybrid CNN-Transformer Accelerator With Multi-Level Strassen MatMul</strong><p>Yuxiao Wen, <b>Wenyao Zhao</b>, Xu Yang, Zhe Wang, Zhao Zhang, Jian Liu, Nanjian Wu, Runjiang Dou, Liyuan Liu · <i>Electronics Letters</i>, 62(1): e70767 · Gold Open Access (CC BY-NC-ND 4.0)</p></div>
+      <p class="publication-list__links"><a href="https://doi.org/10.1049/ell2.70767">网页</a><a href="{{ '/images/project/202407-202510-Infra/Electronics Letters - 2026 - Wen - A Heterogeneous Hybrid CNN‐Transformer Accelerator With Multi‐Level Strassen MatMul.pdf' | relative_url }}">PDF</a></p>
+    </li>
     <li>
       <span class="publication-list__year">2024</span>
       <div><strong>An energy-efficient dehazing neural network accelerator based on E2 AOD-Net</strong><p>Zhihao Zhang, Gaoming Du, Zhenmin Li, Qingran Kang, <b>Wenyao Zhao</b>, Xiaolei Wang · <i>Journal of Real-Time Image Processing</i>, 21(6): 197 · JCR Q2, IF 3.0</p></div>
